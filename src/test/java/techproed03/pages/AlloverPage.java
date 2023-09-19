@@ -32,7 +32,7 @@ public class AlloverPage {
         PageFactory.initElements(Driver.getDriver(),this);
 
 
-        //!!!Kesinlikle ctrl+L yapmayalim
+        //!!!Kesinlikle ctrl+L yapmayalim!!!   _________  !!!Branch'imiza dikkat edelim sahsi düzenlemelerde kendi branchimizla calisalim!!!
     }
 
 
