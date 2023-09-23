@@ -265,9 +265,11 @@ public class AlloverPage {
     public WebElement UserNameOrEmailAddress;
     @FindBy(xpath = "//input[@id='password']")
     public WebElement PasswordM;
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement SignInButtonMerve2;
     @FindBy(xpath = "//input[@type='search']")
     public WebElement SearchButtonMerve;
-    @FindBy(xpath = "//*[@id='main']")
+    @FindBy(xpath = "//*[.='Electric Rice-Cooker']")
     public WebElement VerifyM;
 
 
