@@ -34,7 +34,7 @@ public class AlloverPage {
         PageFactory.initElements(Driver.getDriver(),this);
 
 
-        //!!!Kesinlikle ctrl+L yapmayalim
+        //!!!Kesinlikle ctrl+L yapmayalim!!!   _________  !!!Branch'imiza dikkat edelim sahsi düzenlemelerde kendi branchimizla calisalim!!!
     }
 
     //Hakan Oguz - 40
@@ -158,6 +158,8 @@ public class AlloverPage {
 
 
     //Nuriye - 160
+@FindBy(xpath = "//a[@class='login inline-type']")
+public WebElement signIN;
 
 
 
