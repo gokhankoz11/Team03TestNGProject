@@ -1,30 +1,11 @@
 package techproed03.pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import techproed03.utilities.Driver;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import javax.xml.xpath.XPath;
 
 
 public class AlloverPage {
@@ -278,10 +259,16 @@ public class AlloverPage {
 
 
     //Merve - 280
-
-
-
-
+    @FindBy(xpath ="//span[.='Sign In']")
+    public WebElement SingInButtonMerve;
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement UserNameOrEmailAddress;
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement PasswordM;
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement SearchButtonMerve;
+    @FindBy(xpath = "//*[@id='main']")
+    public WebElement VerifyM;
 
 
 
