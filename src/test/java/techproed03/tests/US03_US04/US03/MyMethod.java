@@ -11,7 +11,7 @@ import techproed03.utilities.ReusableMethods;
 public class MyMethod {
 
     public static void userLoginMethod(){
-        Driver.getDriver().get(ConfigReader.getProperty("allovercommerceUrlNT"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverCommerceUrlNT"));
         AlloverPage alloverPage=new AlloverPage();
         alloverPage.signinNT.click();
         alloverPage.userNameNT.sendKeys(ConfigReader.getProperty("userNameNT"), Keys.TAB,
