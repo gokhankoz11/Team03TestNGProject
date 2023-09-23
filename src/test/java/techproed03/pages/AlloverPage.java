@@ -271,6 +271,8 @@ public WebElement signIN;
     public WebElement SearchButtonMerve;
     @FindBy(xpath = "//*[.='Electric Rice-Cooker']")
     public WebElement VerifyM;
+    @FindBy(xpath = "//*[@name='add-to-cart']")
+    public WebElement AddToCardMerve;
 
 
 
