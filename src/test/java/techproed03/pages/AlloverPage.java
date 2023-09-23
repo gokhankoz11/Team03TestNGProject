@@ -220,31 +220,31 @@ public class AlloverPage {
     //Omer - 220
     @FindBy(xpath="//*[@class='register inline-type']")
     public WebElement registerButton_ofa;
-    @FindBy(xpath="//*[@class='nav-link']")
-    public WebElement signupButton_ofa;
-    @FindBy(linkText = "wcfmmp_become_vendor_link")
+    @FindBy(xpath = "//*[@class='wcfmmp_become_vendor_link']//a")
     public WebElement becomeVendorButton_ofa;
-    @FindBy(xpath ="//*[@type='text']")
+    @FindBy(id ="user_email")
     public WebElement regEmailBox_ofa;
-    @FindBy(xpath ="//*[@type='password']")
+    @FindBy(id ="passoword")
     public WebElement regPasswordBox_ofa;
+    @FindBy(id ="confirm_pwd")
+    public WebElement regPasswordConf_ofa;
     @FindBy(name ="save-data")
     public WebElement regButton_ofa;
+    @FindBy(xpath = "//*[@class='wcfm_email_verified']//input")
+    public WebElement verCode_ofa;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@class='fc-button-label']")
+    public WebElement consentFakemail_ofa;
+    @FindBy(xpath = "//*[@class='col-xs-0 col-md-2 hidden-mobile']//div")
+    public WebElement copyMail_ofa;
+    @FindBy(xpath = "//*[@class='color cetc hidden-mobile']")
+    public WebElement copyPass_ofa;
+    @FindBy(id = "body_content_inner")
+    public WebElement code_ofa;
+    @FindBy(id = "schranka")
+    public WebElement mailBox_ofa;
+    @FindBy(xpath = "//*[@class='col-xs-2 maxWidth text-center vertical-middle flex-text-left']//span")
+    public WebElement fakeBack;
 
 
     //Ridvan - 250
