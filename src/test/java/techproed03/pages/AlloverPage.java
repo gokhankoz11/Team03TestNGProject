@@ -127,9 +127,15 @@ public class AlloverPage {
 
 
 
-
-
     //Ayse - 130
+    @FindBy(xpath ="//*[@class='register inline-type']") public WebElement registerLinkAyse;
+    @FindBy(css = "#reg_email") public WebElement emailTabAyse;
+    @FindBy(css = "#reg_username") public WebElement usernameTabAyse;
+    @FindBy(css = "#reg_password") public WebElement passwordTabAyse;
+    @FindBy(css = "#register-policy") public WebElement registerPolicyAyse;
+    @FindBy(css = ".woocommerce-Button") public WebElement signUpAyse;
+    @FindBy(xpath = "//*[@id='header']/div/section/div/div[1]/div/div/div/p") public WebElement welcomeHeadAyse;
+    @FindBy(css = "div.login-popup") public WebElement loginPopupAyse;
 
 
 
