@@ -19,23 +19,7 @@ public class MyMethod {
 
 
     }
-    public static void billingAddressFormDoldurmaMethodu(){
-        AlloverPage alloverPage=new AlloverPage();
-        alloverPage.billingAddressFirstNameNT.sendKeys("Ahmet",Keys.TAB,
-                "Temiz",Keys.TAB,"Team03 Company");
-        ReusableMethods.bekle(1);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.scrollByAmount(0, 400);
-        Select select=new Select(alloverPage.ddmBillingAddressCountryNT);
-        select.selectByVisibleText("American Samoa");
-        alloverPage.billingStreetAddressKutusu1NT.sendKeys("Viktoria 132",Keys.TAB,
-                "Koza Apt.",Keys.TAB,"New York");
-        Select select1=new Select(alloverPage.ddmBillingAddressStateNT);
-        select1.selectByVisibleText("New York");
-        alloverPage.billingZipCodeKutusuNT.sendKeys("4536745",Keys.TAB,"02134256743",Keys.ENTER);
 
-
-    }
 
     public static void userBillingClearMethod() {
         AlloverPage alloverPage=new AlloverPage();

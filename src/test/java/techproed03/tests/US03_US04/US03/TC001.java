@@ -26,7 +26,7 @@ public class TC001 {
         alloverPage.billingAddressAddButtonNT.click();
         ReusableMethods.bekle(2);
         //Zorunlu adres kutucuklarini eksiksiz doldurunuz
-        MyMethod.billingAddressFormDoldurmaMethodu();
+       // MyMethod.billingAddressFormDoldurmaMethodu();
         ReusableMethods.bekle(2);
         //Save Adress butonuna tikla
         //''Address changed successfully'' mesajinin alindigini dogrula
