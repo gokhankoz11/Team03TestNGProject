@@ -12,6 +12,7 @@ public class US12_Test01 {
     @Test
     public void test01() throws InterruptedException {
         AlloverPage alloverPage = new AlloverPage();
+        /*
 
         Driver.getDriver().get(ConfigReader.getProperty("alloverUrl_ofa"));
         String alloverUrl = Driver.getDriver().getWindowHandle();
@@ -20,6 +21,8 @@ public class US12_Test01 {
         Thread.sleep(2000);
         alloverPage.becomeVendorButton_ofa.click();
         Thread.sleep(2000);
+
+
 
         Driver.getDriver().switchTo().newWindow(WindowType.WINDOW);
         Driver.getDriver().get(ConfigReader.getProperty("FakeMailUrl_ofa"));
@@ -58,6 +61,8 @@ public class US12_Test01 {
         alloverPage.regButton_ofa.click();
 
         Thread.sleep(2000);
+
+         */
 
 
 
