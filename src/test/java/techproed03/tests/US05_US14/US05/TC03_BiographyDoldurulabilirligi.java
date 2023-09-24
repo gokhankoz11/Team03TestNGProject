@@ -1,9 +1,9 @@
-package kendiCalismam.tests.US05_US14.US_05;
+package techproed03.tests.US05_US14.US05;
 
-import kendiCalismam.pages.AlloverPage;
-import kendiCalismam.utilities.ConfigReader;
-import kendiCalismam.utilities.Driver;
-import kendiCalismam.utilities.ReusableMethods;
+import techproed03.pages.AlloverPage;
+import techproed03.utilities.ConfigReader;
+import techproed03.utilities.Driver;
+import techproed03.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -34,10 +34,6 @@ public class TC03_BiographyDoldurulabilirligi {
         ReusableMethods.bekle(2);
 
 
-        //alloverPage.biographyBolumuSuna.clear();
-       // ReusableMethods.bekle(2);
-       // Driver.getDriver().switchTo().parentFrame();
-        //ReusableMethods.bekle(2);
 
     }
 }

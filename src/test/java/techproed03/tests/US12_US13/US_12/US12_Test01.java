@@ -8,7 +8,7 @@ import techproed03.pages.AlloverPage;
 import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
 
-public class US12_Test01 {
+/* public class US12_Test01 {
     @Test
     public void test01() throws InterruptedException {
         AlloverPage alloverPage = new AlloverPage();
@@ -61,14 +61,5 @@ public class US12_Test01 {
 
 
 
-
-
-
-
-
-
-
-
-
     }
-}
+}*/

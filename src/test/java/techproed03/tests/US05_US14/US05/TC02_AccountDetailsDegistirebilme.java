@@ -1,11 +1,10 @@
-package kendiCalismam.tests.US05_US14.US_05;
+package techproed03.tests.US05_US14.US05;
 
-import kendiCalismam.pages.AlloverPage;
-import kendiCalismam.utilities.ConfigReader;
-import kendiCalismam.utilities.Driver;
-import kendiCalismam.utilities.ReusableMethods;
+import techproed03.pages.AlloverPage;
+import techproed03.utilities.ConfigReader;
+import techproed03.utilities.Driver;
+import techproed03.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

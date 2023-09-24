@@ -206,6 +206,35 @@ public class AlloverPage {
 
 
     //Suna - 190
+    @FindBy(xpath = "//span[text()='Sign In']")
+    public WebElement ilkGirisSignInSuna;
+    @FindBy(css = "#username")
+    public WebElement UsernameOrEmailTextBoxSuna;
+    @FindBy(css = "#password")
+    public WebElement passwordBoxSuna;
+    @FindBy(xpath = "//span[text()='Sign In']")
+    public WebElement ikinciSignInButtonSuna;
+    @FindBy(xpath = "//a[text()='My Account']")
+    public WebElement myAccountLinkSuna;
+    @FindBy(xpath = "//a[text()='Account details']")
+    public WebElement accountDetailsLinkSuna;
+    @FindBy(xpath = "(//h4)[2]")
+    public WebElement accountDetailsBasligiSuna;
+    @FindBy(css="#account_first_name")
+    public WebElement firstNameSuna;
+    @FindBy(css="#account_last_name")
+    public WebElement lastNameSuna;
+    @FindBy(css="#account_display_name")
+    public WebElement displayNameSuna;
+    @FindBy(css="#account_email")
+    public WebElement emailAdressSuna;
+    @FindBy(xpath="//button[@name='save_account_details']")
+    public WebElement saveChangesButtonSuna;
+    @FindBy(xpath = "//*[@role='alert']")
+    public WebElement basariliYazisi1Suna;
+    @FindBy(xpath = "//*[@id='tinymce']")
+    public WebElement biographyBolumuSuna;
+
 
 
 
