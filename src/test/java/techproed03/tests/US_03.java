@@ -12,7 +12,7 @@ public class US_03 {
         //Kullanici olarak giris yapiniz
 
         //My Account alanina tiklayiniz
-        //Acilan sayfadan Adresses alanina tiklayiniz
+        //Acilan sayfadan Adresses alaninga tiklayiniz
         //Adresses'de önce e-mail'in geldigini dogrulayiniz
         //Zorunlu adres kutucuklarini eksiksiz doldurunuz
         //Save Adress butonuna tikla
