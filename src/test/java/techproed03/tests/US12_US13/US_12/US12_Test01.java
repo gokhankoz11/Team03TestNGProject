@@ -12,15 +12,15 @@ import techproed03.utilities.Driver;
 
 public class US12_Test01 {
     @Test
-    public void test01() throws InterruptedException {
-        AlloverPage alloverPage = new AlloverPage();
+   public void test01() throws InterruptedException {
+       AlloverPage alloverPage = new AlloverPage();
 
         FakeMailPage fakeMailPage = new FakeMailPage();
 
 
         Driver.getDriver().get(ConfigReader.getProperty("alloverUrl_ofa"));
-        String alloverUrl = Driver.getDriver().getWindowHandle();
-        Thread.sleep(2000);
+       String alloverUrl = Driver.getDriver().getWindowHandle();
+       Thread.sleep(2000);
         alloverPage.registerButton_ofa.click();
         Thread.sleep(2000);
         alloverPage.becomeVendorButton_ofa.click();
@@ -80,4 +80,4 @@ public class US12_Test01 {
 
 
     }
-}
+//}

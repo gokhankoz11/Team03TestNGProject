@@ -19,16 +19,37 @@ public class MyMethod {
 
 
     }
+    public static void userBillingAddressFormDoldurmaMethod() {
+        AlloverPage alloverPage=new AlloverPage();
+        alloverPage.billingAddressFirstNameNT.sendKeys("Ahmet");
+        ReusableMethods.bekle(1);
+        alloverPage.billingLastNameKutusuNT.sendKeys("Temiz", Keys.TAB,
+                "Team03_Company", Keys.TAB);
+        ReusableMethods.bekle(1);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.scrollByAmount(0, 400);
+        Select select=new Select(alloverPage.ddmBillingAddressCountryNT);
+        select.selectByVisibleText("Turkey");
+        ReusableMethods.bekle(1);
+        alloverPage.billingStreetAddressKutusu1NT.sendKeys("Osmangazi Mah", Keys.TAB,
+                "Yildirim Apartmani 12");
+        ReusableMethods.bekle(1);
+        alloverPage.billingZipCodeKutusuNT.sendKeys("4564");
+        alloverPage.billingTownCityKutusuNT.sendKeys("Izmir");
+        Select select1=new Select(alloverPage.ddmBillingAddressStateNT);
+        select1.selectByIndex(34);
+      alloverPage.billingPhoneKutusuNT.sendKeys("0213452345");
+        ReusableMethods.bekle(1);
+        alloverPage.billingSaveAddressButtonNT.submit();
+    }
 
 
     public static void userBillingClearMethod() {
         AlloverPage alloverPage=new AlloverPage();
-
-        if (alloverPage.billingAddressAddButtonNT.isDisplayed()) {
+        if (alloverPage.billingAddressFirstNameNT.isDisplayed()) {
             Actions actions = new Actions(Driver.getDriver());
             ReusableMethods.bekle(2);
             actions.scrollByAmount(0, 500).perform();
-            alloverPage.billingAddressAddButtonNT.click();
             ReusableMethods.bekle(1);
             alloverPage.billingAddressFirstNameNT.clear();
             ReusableMethods.bekle(1);
@@ -39,26 +60,17 @@ public class MyMethod {
             actions.scrollByAmount(0, 500).perform();
 
             ReusableMethods.bekle(1);
-           alloverPage.ddmBillingAddressCountryNT .clear();
-            ReusableMethods.bekle(1);
             alloverPage.billingStreetAddressKutusu1NT.clear();
             ReusableMethods.bekle(1);
             alloverPage.billingStreetAddressKutusu2NT.clear();
             ReusableMethods.bekle(1);
-            alloverPage.billingTownCityKutusuNT.clear();
-            ReusableMethods.bekle(1);
-            alloverPage.ddmBillingAddressStateNT.clear();
-            ReusableMethods.bekle(1);
             alloverPage.billingZipCodeKutusuNT.clear();
             ReusableMethods.bekle(1);
+            alloverPage.billingTownCityKutusuNT.clear();
+            ReusableMethods.bekle(1);
             alloverPage.billingPhoneKutusuNT.clear();
-
         } else {
             alloverPage.billingAddressAddButtonNT.click();
-    }
-
-
         }
-
-
+}
 }
