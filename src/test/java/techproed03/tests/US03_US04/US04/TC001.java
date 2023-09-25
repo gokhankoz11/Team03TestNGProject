@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import techproed03.pages.AlloverPage;
 import techproed03.tests.US03_US04.US03.MyMethod;
+import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
 
 public class TC001 {
@@ -38,6 +39,7 @@ public class TC001 {
         softAssert.assertTrue(alloverPage.shippingPostCodeUyariMesajiNT.isDisplayed());
         softAssert.assertTrue(alloverPage.shippingTownCityUyariMesajiNT.isDisplayed());
         softAssert.assertAll();
+        Driver.closeDriver();
 
 
     }

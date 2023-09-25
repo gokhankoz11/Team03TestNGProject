@@ -27,16 +27,12 @@ public class MyMethod {
         ReusableMethods.bekle(1);
         Actions actions = new Actions(Driver.getDriver());
         actions.scrollByAmount(0, 400);
-        Select select=new Select(alloverPage.ddmBillingAddressCountryNT);
-        select.selectByVisibleText("Turkey");
         ReusableMethods.bekle(1);
         alloverPage.billingStreetAddressKutusu1NT.sendKeys("Osmangazi Mah", Keys.TAB,
                 "Yildirim Apartmani 12");
         ReusableMethods.bekle(1);
         alloverPage.billingZipCodeKutusuNT.sendKeys("4564");
         alloverPage.billingTownCityKutusuNT.sendKeys("Izmir");
-        Select select1=new Select(alloverPage.ddmBillingAddressStateNT);
-        select1.selectByIndex(34);
       alloverPage.billingPhoneKutusuNT.sendKeys("0213452345");
         ReusableMethods.bekle(1);
         alloverPage.billingSaveAddressButtonNT.submit();
@@ -79,18 +75,13 @@ public class MyMethod {
         ReusableMethods.bekle(1);
         Actions actions = new Actions(Driver.getDriver());
         actions.scrollByAmount(0, 400);
-        Select select=new Select(alloverPage.ddmShippingAddressCountryNT);
-        select.selectByVisibleText("Turkey");
         ReusableMethods.bekle(1);
         alloverPage.shippingStreetAddressKutusu1NT.sendKeys("Lale Mah", Keys.TAB,
                 "Huzur Apartmani 12");
         ReusableMethods.bekle(1);
         alloverPage.shippingZipCodeKutusuNT.sendKeys("4534");
-        alloverPage.shippingTownCityKutusuNT.sendKeys("Izmir");
-        Select select1=new Select(alloverPage.ddmShippingAddressProvinceNT);
-        select1.selectByIndex(32);
-        ReusableMethods.bekle(1);
-        alloverPage.shippingAddressAddButtonNT.submit();
+        alloverPage.shippingTownCityKutusuNT.sendKeys("Afyon");
+        alloverPage.billingSaveAddressButtonNT.click();
     }
     public static void userShippingClearMethod() {
         if (alloverPage.shippingAddressFirstNameNT.isDisplayed()) {
