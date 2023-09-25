@@ -173,7 +173,9 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@id='shipping_company']") public WebElement shippingCompanyKutusuNT;  @FindBy(xpath = "//select[@id='shipping_country']") public WebElement ddmShippingAddressCountryNT;
     @FindBy(xpath = "//input[@id='shipping_address_1']") public WebElement shippingStreetAddressKutusu1NT;   @FindBy(xpath = "//input[@id='shipping_address_2']") public WebElement shippingStreetAddressKutusu2NT;
     @FindBy(xpath = "//*[@id='shipping_city']") public WebElement shippingTownCityKutusuNT;     @FindBy(xpath = "//*[@id='shipping_postcode']") public WebElement shippingZipCodeKutusuNT;
-    @FindBy(xpath = "//*[@data-id='billing_first_name']") public WebElement ddmShippingAddressProvinceNT;
+    @FindBy(xpath = "//*[@data-id='billing_first_name']") public WebElement ddmShippingAddressProvinceNT;    @FindBy(xpath = "//*[@data-id='shipping_first_name']") public WebElement shippingFirstNameUyariMesajiNT;
+    @FindBy(xpath = "//*[@data-id='shipping_last_name']") public WebElement shippingLastNameUyariMesajiNT;    @FindBy(xpath = "//*[@data-id='shipping_address_1']") public WebElement shippingStreetaddressUyariMesajiNT;
+    @FindBy(xpath = "//*[@data-id='shipping_postcode']") public WebElement shippingPostCodeUyariMesajiNT;    @FindBy(xpath = "//*[@data-id='shipping_city']") public WebElement shippingTownCityUyariMesajiNT;
 
 
 
