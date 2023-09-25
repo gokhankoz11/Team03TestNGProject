@@ -176,8 +176,7 @@ public class TC002 {
 
         ReusableMethods.bekle(1);
         alloverPage.billingSaveAddressButtonNT.submit();
-        softAssert.assertTrue(alloverPage.billingPostCodeUyariMesajiNT.isDisplayed());
-        Driver.getDriver().navigate().refresh();
+        softAssert.assertTrue(alloverPage.billingPhoneUyariMesajiNT.isDisplayed());
     }
     @AfterClass
     public void afterClass() {
