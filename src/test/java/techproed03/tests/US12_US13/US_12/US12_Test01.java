@@ -6,7 +6,6 @@ import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 import techproed03.pages.AlloverPage;
 import techproed03.pages.FakeMailPage;
-import techproed03.pages.FakeMail_ofa;
 import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
 
