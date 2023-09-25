@@ -37,8 +37,6 @@ public class AlloverPage {
         //!!!Kesinlikle ctrl+L yapmayalim!!!   _________  !!!Branch'imiza dikkat edelim sahsi düzenlemelerde kendi branchimizla calisalim!!!
     }
 
-
-
     //Hakan Oguz - 40
 
 
@@ -127,6 +125,8 @@ public class AlloverPage {
 
 
 
+
+
     //Ayse - 130
     @FindBy(xpath ="//*[@class='register inline-type']") public WebElement registerLinkAyse;
     @FindBy(css = "#reg_email") public WebElement emailTabAyse;
@@ -136,14 +136,6 @@ public class AlloverPage {
     @FindBy(css = ".woocommerce-Button") public WebElement signUpAyse;
     @FindBy(xpath = "//*[@id='header']/div/section/div/div[1]/div/div/div/p") public WebElement welcomeHeadAyse;
     @FindBy(css = "div.login-popup") public WebElement loginPopupAyse;
-
-
-
-
-
-
-
-
 
 
 
@@ -195,22 +187,6 @@ public class AlloverPage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Suna - 190
 
 
@@ -242,20 +218,20 @@ public class AlloverPage {
 
 
     //Omer - 220
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath="//*[@class='register inline-type']")
+    public WebElement registerButton_ofa;
+    @FindBy(xpath = "//*[@class='wcfmmp_become_vendor_link']//a")
+    public WebElement becomeVendorButton_ofa;
+    @FindBy(id ="user_email")
+    public WebElement regEmailBox_ofa;
+    @FindBy(id ="passoword")
+    public WebElement regPasswordBox_ofa;
+    @FindBy(id ="confirm_pwd")
+    public WebElement regPasswordConf_ofa;
+    @FindBy(name ="save-data")
+    public WebElement regButton_ofa;
+    @FindBy(xpath = "//*[@class='wcfm_email_verified']//input")
+    public WebElement verCode_ofa;
 
 
 
@@ -317,18 +293,6 @@ public class AlloverPage {
     public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']")
     public WebElement AddToCardMerve;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

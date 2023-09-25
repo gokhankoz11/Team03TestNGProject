@@ -47,5 +47,52 @@ public class FakeMailPage {
 
 
 
+    //Omer
+    @FindBy(xpath = "//*[@class='fc-button-label']")
+    public WebElement consentFakemail_ofa;
+    @FindBy(xpath = "//*[@class='col-xs-0 col-md-2 hidden-mobile']//div")
+    public WebElement copyMail_ofa;
+    @FindBy(xpath = "//*[@class='color cetc hidden-mobile']")
+    public WebElement copyPass_ofa;
+    @FindBy(id = "body_content_inner")
+    public WebElement code_ofa;
+    @FindBy(id = "schranka")
+    public WebElement mailBox_ofa;
+    @FindBy(xpath = "//*[@class='col-xs-2 maxWidth text-center vertical-middle flex-text-left']//span")
+    public WebElement fakeBack_ofa;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
