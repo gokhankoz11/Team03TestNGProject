@@ -64,20 +64,9 @@ public class US12_Test01 {
         alloverPage.regPasswordConf_ofa.sendKeys(Keys.COMMAND+"v");
         alloverPage.regButton_ofa.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(2000);   
+}
 
+}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-//}
