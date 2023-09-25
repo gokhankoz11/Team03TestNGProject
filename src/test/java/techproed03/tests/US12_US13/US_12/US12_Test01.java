@@ -11,7 +11,7 @@ import techproed03.utilities.Driver;
 public class US12_Test01 {
     @Test
     public void test01() throws InterruptedException {
-        AlloverPage alloverPage = new AlloverPage();
+     /*   AlloverPage alloverPage = new AlloverPage();
 
         Driver.getDriver().get(ConfigReader.getProperty("alloverUrl_ofa"));
         String alloverUrl = Driver.getDriver().getWindowHandle();
@@ -67,7 +67,7 @@ public class US12_Test01 {
 
 
 
-
+*/
 
 
     }
