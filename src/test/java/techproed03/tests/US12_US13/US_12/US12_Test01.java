@@ -12,10 +12,15 @@ import techproed03.utilities.Driver;
 
 public class US12_Test01 {
     @Test
+
+    public void test01() throws InterruptedException {
+     /*   AlloverPage alloverPage = new AlloverPage();
+
    public void test01() throws InterruptedException {
        AlloverPage alloverPage = new AlloverPage();
 
         FakeMailPage fakeMailPage = new FakeMailPage();
+
 
 
         Driver.getDriver().get(ConfigReader.getProperty("alloverUrl_ofa"));
@@ -64,8 +69,21 @@ public class US12_Test01 {
         alloverPage.regPasswordConf_ofa.sendKeys(Keys.COMMAND+"v");
         alloverPage.regButton_ofa.click();
 
+
+        Thread.sleep(2000);
+
+
+
+
+
+
+
+
+
+
         Thread.sleep(2000);   
 }
+
 
 }
 
