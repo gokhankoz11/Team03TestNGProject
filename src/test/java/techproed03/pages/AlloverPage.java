@@ -98,6 +98,33 @@ public class AlloverPage {
 
 
     //Ilyas - 100
+        @FindBy(xpath = "(//*[@class='w-icon-account'])[1]")
+        public WebElement singInIlyas;
+        @FindBy(xpath = "//*[@id='username']")
+        public WebElement emailIlyas;
+        @FindBy(xpath = "//*[@class='login logout inline-type']")
+        public WebElement singOutIlyas;
+        @FindBy(linkText = "Store Manager")
+        public WebElement storeManagerIlyas;
+        @FindBy(xpath = "(//*[@class='text'])[6]")
+        public WebElement couponsButtonIlyas;
+        @FindBy(xpath = "(//*[@class='text'])[10]")
+        public WebElement paymentsButtonIlyas;
+        @FindBy(id = "add_new_coupon_dashboard")
+        public WebElement addNewButtonIlyas;
+        @FindBy(xpath = "//*[@id='title']")
+        public WebElement codeAlaniIlyas;
+        @FindBy(xpath = "(//input)[7]")   //*[@type='checkbox'])[1]
+        public WebElement freeShippingIlyas;
+        @FindBy(xpath = "(//input)[8]")
+        public WebElement showOnStoreIlyas;
+
+        @FindBy(xpath = "//*[@name='submit-data']")     //input)[21]
+        public WebElement submitIlyas;
+        @FindBy(xpath = "//*[@class='coupon-types coupon-types-percent']")
+        public WebElement percentageDiscount;
+
+
 
 
 
@@ -320,7 +347,7 @@ public class AlloverPage {
     public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']")
     public WebElement AddToCardMerve;
-
+    @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
 
 
 
