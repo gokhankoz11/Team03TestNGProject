@@ -1,16 +1,18 @@
-package techproed03.tests.US12_US13.US_12;
+package techproed03.tests.US12_US13.US12;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WindowType;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import techproed03.pages.AlloverPage;
 import techproed03.pages.FakeMailPage;
 import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
 
-public class US12_Test01 {
-    @Test
+public class US12_Test03 {
+    @BeforeTest
     public void test01() throws InterruptedException {
         AlloverPage alloverPage = new AlloverPage();
 
@@ -26,7 +28,6 @@ public class US12_Test01 {
         Thread.sleep(2000);
 
 
-
         Driver.getDriver().switchTo().newWindow(WindowType.WINDOW);
         Driver.getDriver().get(ConfigReader.getProperty("FakeMailUrl_ofa"));
         String FakeMailUrl = Driver.getDriver().getWindowHandle();
@@ -35,19 +36,18 @@ public class US12_Test01 {
         fakeMailPage.copyMail_ofa.click();
 
         Driver.getDriver().switchTo().window(alloverUrl);
-        alloverPage.regEmailBox_ofa.sendKeys(Keys.COMMAND+"v"+Keys.TAB);
-        Thread.sleep(6000);
+        alloverPage.regEmailBox_ofa.sendKeys(Keys.COMMAND + "v" + Keys.TAB);
+        Thread.sleep(5000);
 
         Driver.getDriver().switchTo().window(FakeMailUrl);
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         Driver.getDriver().navigate().refresh();
-        Thread.sleep(4000);
+        Thread.sleep(5000);
 
         fakeMailPage.mailBox_ofa.click();
         Thread.sleep(2000);
         Driver.getDriver().switchTo().frame("iframeMail");
         String code = fakeMailPage.code_ofa.getText().replaceAll("[^0-9]", "");
-        System.out.println(code);
 
         Driver.getDriver().switchTo().window(alloverUrl);
         Thread.sleep(2000);
@@ -59,24 +59,36 @@ public class US12_Test01 {
         fakeMailPage.copyPass_ofa.click();
 
         Driver.getDriver().switchTo().window(alloverUrl);
-        alloverPage.regPasswordBox_ofa.sendKeys(Keys.COMMAND+"v");
-        alloverPage.regPasswordConf_ofa.sendKeys(Keys.COMMAND+"v");
+        alloverPage.regPasswordBox_ofa.sendKeys(Keys.COMMAND + "v");
+        alloverPage.regPasswordConf_ofa.sendKeys(Keys.COMMAND + "v");
         alloverPage.regButton_ofa.click();
 
         Thread.sleep(2000);
+        alloverPage.notrightnowButton_ofa.click();
+        alloverPage.logo_ofa.click();
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        Thread.sleep(2000);
+        alloverPage.myAccount_ofa.click();
+        alloverPage.addressesButton_ofa.click();
+        alloverPage.addButton_ofa.click();
+    }
+    @Test
+    public void test03() {
+        AlloverPage alloverPage = new AlloverPage();
 
-
-
-
-
-
-
-
-
-
-
-
-
+        //Billing address bilgileri doldurulur
+        //Last name bos birakilir
+        alloverPage.firstnameButton_ofa.sendKeys(ConfigReader.getProperty("firstName_ofa"));
+        alloverPage.countryMenu_ofa.click();
+        alloverPage.cmBox_ofa.sendKeys(ConfigReader.getProperty("country_ofa") + Keys.ENTER);
+        alloverPage.billingstreetBox_ofa.sendKeys(ConfigReader.getProperty("street_ofa"));
+        alloverPage.billingcityBox_ofa.sendKeys(ConfigReader.getProperty("city_ofa"));
+        alloverPage.billingpostcodeBox_ofa.sendKeys(ConfigReader.getProperty("postcode_ofa") + Keys.TAB +
+                ConfigReader.getProperty("phone_ofa") + Keys.TAB + Keys.TAB + Keys.ENTER);
+        String alert = alloverPage.alert_ofa.getText();
+        String alert2 = "Last name is a required field.";
+        Assert.assertEquals(alert,alert2);
 
     }
 }
