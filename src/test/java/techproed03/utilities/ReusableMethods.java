@@ -19,7 +19,6 @@ import java.util.List;
 
 public class ReusableMethods {
 
-
     //HARD WAIT METHOD
     public static void bekle(int saniye) {
         try {
