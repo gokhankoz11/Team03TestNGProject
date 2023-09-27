@@ -1,5 +1,8 @@
 package techproed03.utilities;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.observer.ExtentObserver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +21,9 @@ import java.util.Date;
 import java.util.List;
 
 public class ReusableMethods {
+
+
+
 
 
     //HARD WAIT METHOD
@@ -202,4 +208,6 @@ public class ReusableMethods {
 
         }
     }
+
+
 }
