@@ -17,7 +17,7 @@ public class US01_TC09 {
 
         AlloverPage homePage=new AlloverPage();
         //  Kullanici Web sitesine gider
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlAyse"));
 
         //Register butonuna tiklar
         homePage.registerLinkAyse.click();
@@ -48,7 +48,7 @@ public class US01_TC09 {
         //SIGN UP butonuna tiklar
         homePage.signUpAyse.click();
 
-        // Kayit isleminin gerceklestigini gorur
+        // Kayit isleminin gerceklestigini gorur,homepage header görünür
         Assert.assertTrue(homePage.welcomeHeadAyse.isDisplayed());
     }
 }

@@ -18,7 +18,7 @@ public class US01_TC10 {
         AlloverPage homePage = new AlloverPage();
 
         //  Kullanici Web sitesine gider
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlAyse"));
 
         //Register butonuna tiklar
         homePage.registerLinkAyse.click();
@@ -33,6 +33,10 @@ public class US01_TC10 {
         String fakeMail= fakeMailPage.fakeMailAyse.getText();
         List<String> windows=new ArrayList<>(Driver.getDriver().getWindowHandles());
         Driver.getDriver().switchTo().window(windows.get(0));
+
+        int indexOfPoint=fakeMail.indexOf(".");
+        String userName=fakeMail.substring(0,indexOfPoint);
+        homePage.usernameTabAyse.sendKeys(userName);
         homePage.emailTabAyse.sendKeys(fakeMail);
 
         //Password kutusuna 18 karakterli bir sifre girer
@@ -44,8 +48,8 @@ public class US01_TC10 {
         //SIGN UP butonuna tiklar
         homePage.signUpAyse.click();
 
-        //Kayit islemi gerceklesmedigi gorulür, login Pop görünmeye devam eder
-        Assert.assertTrue(homePage.loginPopupAyse.isDisplayed());
+        //Kayit islemi gerceklestigi gorulür,homepage header gorunur olur
+        Assert.assertTrue(homePage.welcomeHeadAyse.isDisplayed());
 
     }
 }
