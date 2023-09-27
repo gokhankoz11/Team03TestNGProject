@@ -191,56 +191,15 @@ public class AlloverPage {
 
 
     //Suna - 190
-    @FindBy(xpath = "//span[text()='Sign In']")
-    public WebElement ilkGirisSignInSuna;
-    @FindBy(css = "#username")
-    public WebElement UsernameOrEmailTextBoxSuna;
-    @FindBy(css = "#password")
-    public WebElement passwordBoxSuna;
-    @FindBy(xpath = "//span[text()='Sign In']")
-    public WebElement ikinciSignInButtonSuna;
-    @FindBy(xpath = "//a[text()='My Account']")
-    public WebElement myAccountLinkSuna;
-    @FindBy(xpath = "//a[text()='Account details']")
-    public WebElement accountDetailsLinkSuna;
-    @FindBy(xpath = "(//h4)[2]")
-    public WebElement accountDetailsBasligiSuna;
-    @FindBy(css="#account_first_name")
-    public WebElement firstNameSuna;
-    @FindBy(css="#account_last_name")
-    public WebElement lastNameSuna;
-    @FindBy(css="#account_display_name")
-    public WebElement displayNameSuna;
-    @FindBy(css="#account_email")
-    public WebElement emailAdressSuna;
-    @FindBy(xpath="//button[@name='save_account_details']")
-    public WebElement saveChangesButtonSuna;
-    @FindBy(xpath = "//*[@role='alert']")
-    public WebElement basariliYazisi1Suna;
-    @FindBy(xpath = "//*[@id='tinymce']")
-    public WebElement biographyBolumuSuna;
-
-
-
-
-    //Nuriye - 160
-    @FindBy(xpath = "//a[@class='login inline-type']") public WebElement signinNT;
-    @FindBy(xpath = "//*[@id='username']") public WebElement userNameNT;
-    @FindBy(xpath = "//*[@id='menu-item-1079']") public WebElement myAccountNT;
-    @FindBy(xpath = "(//li)[8]") public WebElement addressesButtonNT;
-    @FindBy(xpath = "(//*[@class='edit btn btn-link btn-primary btn-underline mb-4'])[1]") public WebElement billingAddressAddButtonNT;
-    @FindBy(xpath = "//*[@id='billing_first_name']") public WebElement billingAddressFirstNameNT;
-    @FindBy(xpath = "//*[@id='billing_last_name']") public WebElement billingLastNameKutusuNT;
-    @FindBy(xpath = "//*[@id='billing_company']") public WebElement billingCompanyKutusuNT;
-    @FindBy(xpath = "//select[@id='billing_country']") public WebElement ddmBillingAddressCountryNT;
-    @FindBy(xpath = "//input[@id='billing_address_1']") public WebElement billingStreetAddressKutusu1NT;
-    @FindBy(xpath = "//input[@id='billing_address_2']") public WebElement billingStreetAddressKutusu2NT;
-    @FindBy(xpath = "//*[@id='billing_city']") public WebElement billingTownCityKutusuNT;
-    @FindBy(xpath = "//*[@id='billing_state']") public WebElement ddmBillingAddressStateNT;
-    @FindBy(xpath = "//*[@id='billing_postcode']") public WebElement billingZipCodeKutusuNT;
-    @FindBy(xpath = "//*[@id='billing_phone']") public WebElement billingPhoneKutusuNT;
-    @FindBy(xpath = "//*[@id='billing_email']") public WebElement billingEMailKutusuNT;
-    @FindBy(xpath = "//button[@name='save_address']") public WebElement billingSaveAddressButtonNT;
+    @FindBy(xpath = "//span[text()='Sign In']") public WebElement ilkGirisSignInSuna; @FindBy(css = "#username") public WebElement UsernameOrEmailTextBoxSuna;
+    @FindBy(css = "#password") public WebElement passwordBoxSuna; @FindBy(xpath = "(//button[@type='submit'])[1]") public WebElement ikinciSignInButtonSuna;
+    @FindBy(xpath = "//a[text()='My Account']") public WebElement myAccountLinkSuna; @FindBy(xpath = "//a[text()='Account details']") public WebElement accountDetailsLinkSuna;
+    @FindBy(xpath = "(//h4)[2]") public WebElement accountDetailsBasligiSuna; @FindBy(css="#account_first_name") public WebElement firstNameSuna;
+    @FindBy(css="#account_last_name") public WebElement lastNameSuna; @FindBy(css="#account_display_name") public WebElement displayNameSuna;
+    @FindBy(css="#account_email") public WebElement emailAdressSuna; @FindBy(xpath="//button[@name='save_account_details']") public WebElement saveChangesButtonSuna;
+    @FindBy(xpath = "//*[@role='alert']") public WebElement basariliYazisi1Suna; @FindBy(xpath = "//*[@id='tinymce']") public WebElement biographyBolumuSuna;
+    @FindBy(css = "#password_current") public WebElement currentPasswordSuna; @FindBy(css = "#password_1") public WebElement newPasswordSuna;
+    @FindBy(css = "#password_2") public WebElement confirmPasswordSuna; @FindBy(xpath = "//*[@class='page-title-bar']") public WebElement basariliYazisi2Suna;
 
 
 
@@ -253,7 +212,11 @@ public class AlloverPage {
 
 
 
-    //Suna - 190
+
+
+
+
+
 
 
 
