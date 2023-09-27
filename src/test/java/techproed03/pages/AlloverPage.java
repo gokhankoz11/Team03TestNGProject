@@ -136,6 +136,7 @@ public class AlloverPage {
     @FindBy(css = ".woocommerce-Button") public WebElement signUpAyse;
     @FindBy(xpath = "//*[@id='header']/div/section/div/div[1]/div/div/div/p") public WebElement welcomeHeadAyse;
     @FindBy(css = "div.login-popup") public WebElement loginPopupAyse;
+    @FindBy(xpath = "(//p[@class='submit-status'])[2]") public WebElement alreadyRegistredMessage;
 
 
 
