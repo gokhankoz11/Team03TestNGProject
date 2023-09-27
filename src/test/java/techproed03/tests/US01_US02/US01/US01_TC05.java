@@ -17,7 +17,7 @@ public class US01_TC05 {
         AlloverPage homePage=new AlloverPage();
         FakeMailPage fakeMailPage=new FakeMailPage();
         //  Kullanici Web sitesine gider
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlAyse"));
 
         //Register butonuna tiklarRegister butonuna tiklar
         homePage.registerLinkAyse.click();

@@ -20,7 +20,7 @@ public class US01_TC08 {
         AlloverPage homePage=new AlloverPage();
 
         //  Kullanici Web sitesine gider
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlAyse"));
 
         //Register butonuna tiklar
         homePage.registerLinkAyse.click();
