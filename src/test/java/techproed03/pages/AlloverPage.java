@@ -303,32 +303,19 @@ public class AlloverPage {
 
 
     //Merve - 280
-  
-  @FindBy(xpath ="//span[.='Sign In']")
-    public WebElement SingInButtonMerve;
-    @FindBy(xpath = "//input[@id='username']")
-    public WebElement UserNameOrEmailAddress;
-    @FindBy(xpath = "//input[@id='password']")
-    public WebElement PasswordM;
-    @FindBy(xpath = "//*[@type='submit']")
-    public WebElement SignInButtonMerve2;
-    @FindBy(xpath = "//input[@type='search']")
-    public WebElement SearchButtonMerve;
-    @FindBy(xpath = "//*[.='Electric Rice-Cooker']")
-    public WebElement VerifyM;
-    @FindBy(xpath = "//*[@name='add-to-cart']")
-    public WebElement AddToCardMerve;
-    @FindBy(xpath = "//*[@class='cart-title']") public WebElement AddToCardDogrulama;
-
-
-
-
-
-
-
-
-
-
+  @FindBy(xpath ="//span[.='Sign In']") public WebElement SingInButtonMerve;
+    @FindBy(xpath = "//input[@id='username']") public WebElement UserNameOrEmailAddress;
+    @FindBy(xpath = "//input[@id='password']") public WebElement PasswordM;
+    @FindBy(xpath = "//*[@type='submit']") public WebElement SignInButtonMerve2;
+    @FindBy(xpath = "//input[@type='search']") public WebElement SearchButtonMerve;
+    @FindBy(xpath = "//*[.='Electric Rice-Cooker']") public WebElement VerifyM;
+    @FindBy(xpath = "//*[@name='add-to-cart']") public WebElement AddToCardMerve;
+    @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
+    @FindBy(xpath = "//*[@class='product-quantity']") public WebElement CardPlusMinus;
+    @FindBy(xpath = "//*[@class='quantity-plus w-icon-plus']") public WebElement CardPlus;
+    @FindBy(xpath = "//*[@class='quantity-minus w-icon-minus']") public WebElement CardMinus;
+    @FindBy(xpath = "//*[@class='w-icon-cart']") public WebElement CardView;
+    @FindBy(xpath = "//*[@class='button wc-forward']") public  WebElement CardView2;
 
 
 
