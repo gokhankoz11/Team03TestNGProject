@@ -148,6 +148,8 @@ public class AlloverPage {
 
 
 
+
+
     //Nuriye - 160
     @FindBy(xpath = "//a[@class='login inline-type']") public WebElement signinNT;
     @FindBy(xpath = "//*[@id='username']") public WebElement userNameNT;
