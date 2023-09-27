@@ -329,6 +329,7 @@ public class AlloverPage {
     public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']")
     public WebElement AddToCardMerve;
+    @FindBy(xpath = "//*[@class='cart-title']") public WebElement AddToCardDogrulama;
 
 
 
