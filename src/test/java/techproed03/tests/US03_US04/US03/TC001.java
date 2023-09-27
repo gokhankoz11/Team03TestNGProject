@@ -1,14 +1,17 @@
 package techproed03.tests.US03_US04.US03;
 
+import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import techproed03.pages.AlloverPage;
 import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
 
+
 public class TC001 {
     @Test
     public void negativeTest() {
+
         //Kullanici olarak giris yapiniz
         MyMethod.userLoginMethod();
         ReusableMethods.bekle(3);
