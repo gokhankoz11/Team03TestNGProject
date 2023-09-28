@@ -14,7 +14,9 @@ public class US12_Test01 {
     @Test
 
     public void test01() throws InterruptedException {
-     /*   AlloverPage alloverPage = new AlloverPage();
+    }
+}
+     /*  AlloverPage alloverPage = new AlloverPage();
 
    public void test01() throws InterruptedException {
        AlloverPage alloverPage = new AlloverPage();
@@ -84,6 +86,8 @@ public class US12_Test01 {
         Thread.sleep(2000);   
 }
 
+      */
 
-}
+
+
 

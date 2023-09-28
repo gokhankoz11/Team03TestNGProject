@@ -118,39 +118,12 @@ public class AlloverPage {
         public WebElement freeShippingIlyas;
         @FindBy(xpath = "(//input)[8]")
         public WebElement showOnStoreIlyas;
-
         @FindBy(xpath = "//*[@name='submit-data']")     //input)[21]
         public WebElement submitIlyas;
         @FindBy(xpath = "//*[@class='coupon-types coupon-types-percent']")
         public WebElement percentageDiscount;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
+        public  WebElement verifyCodeMassegeIlyas;
 
 
 
@@ -163,6 +136,8 @@ public class AlloverPage {
     @FindBy(css = ".woocommerce-Button") public WebElement signUpAyse;
     @FindBy(xpath = "//*[@id='header']/div/section/div/div[1]/div/div/div/p") public WebElement welcomeHeadAyse;
     @FindBy(css = "div.login-popup") public WebElement loginPopupAyse;
+
+
 
 
 
@@ -243,34 +218,6 @@ public class AlloverPage {
     public WebElement biographyBolumuSuna;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Omer - 220
     @FindBy(xpath="//*[@class='register inline-type']")
     public WebElement registerButton_ofa;
@@ -286,7 +233,6 @@ public class AlloverPage {
     public WebElement regButton_ofa;
     @FindBy(xpath = "//*[@class='wcfm_email_verified']//input")
     public WebElement verCode_ofa;
-
 
 
 

@@ -15,7 +15,7 @@ public class TC_01_VendorCouponTesti {
 
 
         //Siteye git
-        Driver.getDriver().get(ConfigReader.getProperty("AlloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("AlloverUrlIlyas"));
 
         //SingIn butonunu  tikla
         AlloverPage alloverPage=new AlloverPage();
@@ -73,6 +73,9 @@ public class TC_01_VendorCouponTesti {
 
         //Coupon olusturuldugunu dogrula
         Assert.assertEquals("Percentage discount",alloverPage.percentageDiscount.getText());
+
+        //sayfayi kapat
+        Driver.getDriver().close();
 
 
     }
