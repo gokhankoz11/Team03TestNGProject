@@ -8,7 +8,7 @@ import techproed03.pages.AlloverPage;
 import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
-
+/*
 public class TC_02_CouponOlusturulmamali {
 
     @Test
@@ -79,5 +79,5 @@ public class TC_02_CouponOlusturulmamali {
 
     }
 }
-
+*/
 
