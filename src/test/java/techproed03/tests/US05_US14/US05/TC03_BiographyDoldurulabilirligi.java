@@ -14,7 +14,7 @@ public class TC03_BiographyDoldurulabilirligi {
     @Test
     public void test01() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlSuna"));
         AlloverPage alloverPage=new AlloverPage();
         Actions actions=new Actions(Driver.getDriver());
 
@@ -32,6 +32,7 @@ public class TC03_BiographyDoldurulabilirligi {
         ReusableMethods.bekle(2);
         alloverPage.biographyBolumuSuna.sendKeys(ConfigReader.getProperty("biographyYazi"),Keys.ENTER);
         ReusableMethods.bekle(2);
+
 
 
 

@@ -12,7 +12,7 @@ public class TC02_AccountDetailsDegistirebilme {
     @Test
     public void test01() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlSuna"));
 
         AlloverPage alloverPage=new AlloverPage();
         alloverPage.ilkGirisSignInSuna.click();
@@ -36,10 +36,8 @@ public class TC02_AccountDetailsDegistirebilme {
         alloverPage.emailAdressSuna.clear();
         alloverPage.emailAdressSuna.sendKeys("armany.raja@feerock.com",Keys.ENTER);;
 
-        ReusableMethods.scroll(alloverPage.saveChangesButtonSuna);
-        ReusableMethods.click(alloverPage.saveChangesButtonSuna);
-
         Assert.assertTrue(alloverPage.basariliYazisi1Suna.isDisplayed());
+
 
 
     }

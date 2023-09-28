@@ -19,16 +19,16 @@ import java.util.Set;
 public class US06_TC02 {
     @Test
     public void Test2() {
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlM"));
         AlloverPage alloverPage = new AlloverPage();
-        alloverPage.UserNameOrEmailAddress.sendKeys(ConfigReader.getProperty("UserNameOrEmail"));
+        alloverPage.UserNameOrEmailAddress.click();
+        alloverPage.UserNameOrEmailAddress.sendKeys("UserNameOrEmail");
         ReusableMethods.bekle(2);
         alloverPage.PasswordM.sendKeys(ConfigReader.getProperty("passwordMM"), Keys.ENTER);
         ReusableMethods.bekle(2);
         alloverPage.SearchButtonMerve.sendKeys(("Electric Rice-Cooker"), Keys.ENTER);
         alloverPage.AddToCardMerve.click();
 
-        }
 
-
+    }
 }

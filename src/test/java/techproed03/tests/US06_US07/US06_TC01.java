@@ -18,7 +18,7 @@ public class US06_TC01 {
     @Test
     public void Test01() {
       //kullanici siteye gider.
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlM"));
 
         //kullanici adi ve sifresiyle giris yapar.
         AlloverPage alloverPage = new AlloverPage();
