@@ -10,6 +10,8 @@ public  class US15_TC01 extends LoginInGK {
     @Test
     public void testCase01() {
     testInventory("b10", "10");
+    //Inventory islemleri zorunlu alanlar dolduruldugunda  gerceklesmeli
+        // ("SKU", "Manage Stock?", "Stock Status", "SoldI ndividually")
 
 
     }

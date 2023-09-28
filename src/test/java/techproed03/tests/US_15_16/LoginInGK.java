@@ -1,7 +1,9 @@
 package techproed03.tests.US_15_16;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -15,6 +17,10 @@ import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
 
 import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.Random;
+
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public abstract class LoginInGK {
 
@@ -148,26 +154,43 @@ public abstract class LoginInGK {
         AlloverPage alloverPage = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+      //  actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.scrollToElement(alloverPage.submitButtonGK);
         SoftAssert softAssert = new SoftAssert();
-       // ReusableMethods.scroll(alloverPage.submitButtonGK2);
+        // ReusableMethods.scroll(alloverPage.submitButtonGK2);
 
         ReusableMethods.bekle(2);
         ReusableMethods.click(alloverPage.attributesGK);
         ReusableMethods.bekle(3);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.click(alloverPage.colorGK);
-        Select select=new Select(alloverPage.colorMenuGK2);
-        select.selectByIndex(1);
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
+        js.executeScript("arguments[0].click();", alloverPage.colorGK);
+
+        //  ReusableMethods.scroll(alloverPage.sizeGK);
+
+
+       js.executeScript("arguments[0].click();", alloverPage.colorMenuGK);
         ReusableMethods.bekle(2);
+
+        List<WebElement> renkler= Driver.getDriver().findElements(By.cssSelector("#select2-attributes_value_1-results"));
+        Random random=new Random();
+        int randomColor= random.nextInt(renkler.size());
+        renkler.get(randomColor).click();
+
+       // js.executeScript("arguments[0].click();", alloverPage.aaColorGK);
+
+        ReusableMethods.scroll(alloverPage.addNewColorGK);
+
+        ReusableMethods.bekle(2);
+
+
 
         alloverPage.sizeGK.click();
         ReusableMethods.bekle(2);
-        Select select1=new Select(alloverPage.sizeMenuGK);
-        select1.selectByIndex(1);
-        alloverPage.addGK.click();
+
         ReusableMethods.bekle(2);
-        alloverPage.addNameGK.sendKeys(name);
+     //   alloverPage.addNameGK.sendKeys(name);
         ReusableMethods.click(alloverPage.submitButtonGK2);
         softAssert.assertTrue(alloverPage.successfullTextGK.isDisplayed());
 
