@@ -42,43 +42,40 @@ public abstract class LoginInGK {
         actionsGK.moveToElement(alloverPageGK.produktGK).perform();
         ReusableMethods.bekle(2);
         alloverPageGK.addNewGK.click();
-         ReusableMethods.bekle(2);
-         alloverPageGK.producktTitleGK.sendKeys("urun", Keys.TAB, "100", Keys.TAB, "90");
+        ReusableMethods.bekle(2);
+        alloverPageGK.producktTitleGK.sendKeys("urun", Keys.TAB, "100", Keys.TAB, "90");
 
         ReusableMethods.bekle(2);
 
 
+        String dosyaYolu1 = "C:\\Users\\Admin\\Desktop\\us_16_tc_03_Bug.jpg";
 
-          String dosyaYolu1="C:\\Users\\Admin\\Desktop\\us_16_tc_03_Bug.jpg";
+        String dosyaYolu2 = "C:\\Users\\Admin\\Desktop\\hatta.jpg";
 
-          String dosyaYolu2="C:\\Users\\Admin\\Desktop\\hatta.jpg";
-
-          alloverPageGK.featuredImg.click();
-          alloverPageGK.featuredImgSelectFilesButton.click();
-          ReusableMethods.uploadFile(dosyaYolu1);
-          ReusableMethods.bekle(2);
-          alloverPageGK.featuredImgSelectButton.click();
-          ReusableMethods.bekle(2);
-
-
-          alloverPageGK.galleryImg.click();
-          ReusableMethods.bekle(2);
-          alloverPageGK.galleryImgUpLoadFileButton.click();
-          ReusableMethods.bekle(3);
-          alloverPageGK.galleryImgSelectFilesButton.click();
-          ReusableMethods.uploadFile(dosyaYolu2);
-          ReusableMethods.bekle(2);
+        alloverPageGK.featuredImg.click();
+        alloverPageGK.featuredImgSelectFilesButton.click();
+        ReusableMethods.uploadFile(dosyaYolu1);
+        ReusableMethods.bekle(2);
+        alloverPageGK.featuredImgSelectButton.click();
+        ReusableMethods.bekle(2);
 
 
+        alloverPageGK.galleryImg.click();
+        ReusableMethods.bekle(2);
+        alloverPageGK.galleryImgUpLoadFileButton.click();
+        ReusableMethods.bekle(3);
+        alloverPageGK.galleryImgSelectFilesButton.click();
+        ReusableMethods.uploadFile(dosyaYolu2);
+        ReusableMethods.bekle(2);
 
-            JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
-            js.executeScript("arguments[0].click();",alloverPageGK.addToGalleryGK);
 
-           ReusableMethods.bekle(2);
-           Actions actions= new Actions(Driver.getDriver());
-           actions.sendKeys(Keys.PAGE_DOWN).perform();
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", alloverPageGK.addToGalleryGK);
+
+        ReusableMethods.bekle(2);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.click(alloverPageGK.bestSellerCheckbox);
-
 
 
     }
@@ -90,18 +87,18 @@ public abstract class LoginInGK {
         Actions actions = new Actions(Driver.getDriver());
 
 
-      //  actions.scrollToElement(alloverPage.draftGK).perform();
-        actions.sendKeys(Keys.PAGE_DOWN);
+        //  actions.scrollToElement(alloverPage.draftGK).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         SoftAssert softAssert = new SoftAssert();
         // ReusableMethods.scroll(alloverPage.skuGK);
-    ReusableMethods.bekle(2);
+        ReusableMethods.bekle(2);
         ReusableMethods.visibleWait(alloverPage.skuGK, 10);
         ReusableMethods.sendKeysJS(alloverPage.skuGK, sku);
         softAssert.assertTrue(alloverPage.skuGK.isSelected());
-       ReusableMethods.click(alloverPage.manageStockGK);
-       // ReusableMethods.scroll(alloverPage.advancedGK);
+        ReusableMethods.click(alloverPage.manageStockGK);
+        // ReusableMethods.scroll(alloverPage.advancedGK);
         softAssert.assertTrue(alloverPage.manageStockGK.isSelected());
-     //   alloverPage.manageStockGK.click();
+        //   alloverPage.manageStockGK.click();
 
         softAssert.assertTrue(alloverPage.skuGK.isSelected());
         ReusableMethods.sendKeysJS(alloverPage.stockQtyGK, strockQt);
@@ -125,9 +122,11 @@ public abstract class LoginInGK {
         AlloverPage alloverPage = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
-        actions.scrollToElement(alloverPage.advancedGK).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         SoftAssert softAssert = new SoftAssert();
-        alloverPage.shippingGK.click();
+        ReusableMethods.scroll(alloverPage.submitButtonGK2);
+        ReusableMethods.click(alloverPage.shippingGK);
+        ReusableMethods.bekle(2);
         softAssert.assertTrue(alloverPage.shippingGK.isDisplayed());
         alloverPage.weightGK.sendKeys(weight, Keys.TAB, lenght, Keys.TAB, widht, Keys.TAB,
                 height, Keys.TAB, Keys.TAB);
@@ -145,7 +144,32 @@ public abstract class LoginInGK {
 
 
     @Test
-    public void testAttributes() {
+    public void testAttributes(String name) {
+        AlloverPage alloverPage = new AlloverPage();
+        Actions actions = new Actions(Driver.getDriver());
+
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        SoftAssert softAssert = new SoftAssert();
+       // ReusableMethods.scroll(alloverPage.submitButtonGK2);
+
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(alloverPage.attributesGK);
+        ReusableMethods.bekle(3);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.click(alloverPage.colorGK);
+        Select select=new Select(alloverPage.colorMenuGK2);
+        select.selectByIndex(1);
+        ReusableMethods.bekle(2);
+
+        alloverPage.sizeGK.click();
+        ReusableMethods.bekle(2);
+        Select select1=new Select(alloverPage.sizeMenuGK);
+        select1.selectByIndex(1);
+        alloverPage.addGK.click();
+        ReusableMethods.bekle(2);
+        alloverPage.addNameGK.sendKeys(name);
+        ReusableMethods.click(alloverPage.submitButtonGK2);
+        softAssert.assertTrue(alloverPage.successfullTextGK.isDisplayed());
 
 
     }

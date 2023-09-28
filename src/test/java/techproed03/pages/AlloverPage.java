@@ -418,8 +418,18 @@ public class AlloverPage {
     @FindBy(css = "#height")
     public WebElement heightGK;
 
-    @FindBy(css = "#wcfm_products_manage_form_attribute_head")
-    public WebElement attributesGK;
+    @FindBy(css = "#wcfm_products_manage_form_attribute_head") public WebElement attributesGK;
+    @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[5]") public WebElement attributesGK2;
+
+    @FindBy(css = "#attributes_is_active_1") public WebElement colorGK;
+    @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[2]") public WebElement colorMenuGK2;
+    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK;
+    @FindBy(css = "#attributes_is_active_2") public WebElement sizeGK;
+    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[3]") public WebElement sizeMenuGK;
+    @FindBy(xpath = "(//*[text()='Add'])[3]") public WebElement addGK;
+    @FindBy(css = "#attributes_name_4") public WebElement addNameGK;
+
+
 
 
 
