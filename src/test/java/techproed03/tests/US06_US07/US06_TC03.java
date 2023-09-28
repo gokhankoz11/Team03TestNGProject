@@ -15,7 +15,7 @@ public class US06_TC03 {
 
     @Test
     public void test03() {
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlM"));
         AlloverPage alloverPage = new AlloverPage();
         alloverPage.SingInButtonMerve.click();
         ReusableMethods.bekle(3);

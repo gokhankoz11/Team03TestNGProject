@@ -15,7 +15,7 @@ import static java.lang.String.valueOf;
 public class US06_TC04 {
     @Test
     public void test04() {
-        Driver.getDriver().get(ConfigReader.getProperty("alloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlM"));
         AlloverPage alloverPage = new AlloverPage();
         alloverPage.SingInButtonMerve.click();
         ReusableMethods.bekle(3);
