@@ -9,7 +9,7 @@ public  class US15_TC01 extends LoginInGK {
 
     @Test
     public void testCase01() {
-    testInventory("A10", "10");
+    testInventory("b10", "10");
 
 
     }
