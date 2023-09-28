@@ -72,18 +72,6 @@ public class US12_Test01 {
 
         Thread.sleep(2000);
 
-
-
-
-
-
-
-
-
-
-        Thread.sleep(2000);   
+      */
+    }
 }
-
-
-}
-

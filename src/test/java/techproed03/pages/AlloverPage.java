@@ -145,15 +145,6 @@ public class AlloverPage {
 
 
 
-
-
-
-
-
-
-
-
-
     //Ayse - 130
     @FindBy(xpath ="//*[@class='register inline-type']") public WebElement registerLinkAyse;
     @FindBy(css = "#reg_email") public WebElement emailTabAyse;
@@ -163,16 +154,6 @@ public class AlloverPage {
     @FindBy(css = ".woocommerce-Button") public WebElement signUpAyse;
     @FindBy(xpath = "//*[@id='header']/div/section/div/div[1]/div/div/div/p") public WebElement welcomeHeadAyse;
     @FindBy(css = "div.login-popup") public WebElement loginPopupAyse;
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -203,10 +184,6 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@data-id='shipping_first_name']") public WebElement shippingFirstNameUyariMesajiNT;
     @FindBy(xpath = "//*[@data-id='shipping_last_name']") public WebElement shippingLastNameUyariMesajiNT;    @FindBy(xpath = "//*[@data-id='shipping_address_1']") public WebElement shippingStreetaddressUyariMesajiNT;
     @FindBy(xpath = "//*[@data-id='shipping_postcode']") public WebElement shippingPostCodeUyariMesajiNT;    @FindBy(xpath = "//*[@data-id='shipping_city']") public WebElement shippingTownCityUyariMesajiNT;
-
-
-
-
 
 
 
@@ -246,31 +223,6 @@ public class AlloverPage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Omer - 220
     @FindBy(xpath="//*[@class='register inline-type']")
     public WebElement registerButton_ofa;
@@ -295,42 +247,36 @@ public class AlloverPage {
 
 
 
-
-
-
-
-
-
     //Ridvan - 250
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "(//*[@class='w-icon-account'])[1]") public WebElement signinButton_rk;
+    @FindBy(xpath = "//*[@id='username']") public WebElement emailBox_rk;
+    @FindBy(xpath = "//*[@id='password']") public WebElement passwordBox_rk;
+    @FindBy(xpath = "//*[@type='submit']") public WebElement girisButonu_rk;
+    @FindBy(xpath = "//*[@class='logo']") public WebElement anasayfaLogo_rk;
+    @FindBy(xpath = "//*[@id='menu-item-1079']") public WebElement myAccountButton_rk;
+    @FindBy(xpath = "//*[@href='https://allovercommerce.com/store-manager/']") public WebElement storeManagerButton_rk;
+    @FindBy(xpath = "//*[@class='wcfmfa fa-gift'] ") public WebElement couponButton_rk;
+    @FindBy(xpath = "(//*[@class='text'])[18]") public WebElement addNewCouponButton_rk;
+    @FindBy(xpath = "//*[@class='showcoupon']") public WebElement enterYourCoupon_rk;
+    @FindBy(xpath = "//*[@class='btn button btn-rounded btn-default']") public WebElement applyCouponButton_rk;
+    @FindBy(xpath = "//*[@id='coupon_code']") public WebElement couponCodeBox_rk;
+    @FindBy(xpath = "(//*[@class='wcfm-text wcfm_ele'])[1]") public WebElement codeCouponBox_rk;
+    @FindBy(xpath="//*[@id='coupon_amount']") public WebElement couponAmountBox_rk;
+    @FindBy(xpath = "//*[@id='expiry_date']") public WebElement couponExpiryDateBox_rk;
+    @FindBy(xpath = "(//input)[7]") public WebElement freeShippingBox_rk;
+    @FindBy(xpath = "(//*[@class='w-icon-cart'])[1]") public WebElement cartButton_rk;
+    @FindBy(xpath="//*[@class='button checkout wc-forward']") public WebElement checkoutButton_rk;
+    @FindBy(xpath = "//*[@class='checkout_coupon woocommerce-form-coupon']//p") public WebElement applyText_rk;
+    @FindBy(xpath = "(//*[@type='submit'])[2]") public WebElement applyCoupon_rk;
+    @FindBy(xpath = "//h3[1]") public WebElement billingsDetail_rk;
+    @FindBy(xpath = "//*[@id='order_review_heading']") public WebElement orderReviewHeading_rk;
+    @FindBy(xpath = "//*[@class='order-total']") public WebElement orderTotal_rk;
+    @FindBy(xpath = "(//*[@class='input-radio'])[1]") public WebElement wireTransfer_rk;
+    @FindBy(xpath = "//*[@name='woocommerce_checkout_place_order']") public  WebElement placeOrderButton_rk;
+    @FindBy(xpath= "//*[@name='coupon_code']") public WebElement getCouponCodeBox_rk;
+    @FindBy(xpath = "//*[@role='alert']") public WebElement alertButton_rk;
+    @FindBy(xpath = "//*[@class='woocommerce-order']//p") public WebElement thankyou_rk;
+    @FindBy(xpath = "(//h2)[1]") public WebElement orderDetails_rk;
     //Merve - 280
   
   @FindBy(xpath ="//span[.='Sign In']")
