@@ -100,6 +100,9 @@ public class AlloverPage {
         public WebElement submitIlyas;
         @FindBy(xpath = "//*[@class='coupon-types coupon-types-percent']")
         public WebElement percentageDiscount;
+        @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")
+        public WebElement verifyCodeMassegeIlyas;
+
 
 
 
