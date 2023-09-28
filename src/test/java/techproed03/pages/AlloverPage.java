@@ -217,6 +217,11 @@ public class AlloverPage {
 
 
 
+    @FindBy(xpath = "//*[@id='billing_email']") public WebElement billingEMailKutusuNT;
+
+
+
+
 
 
 
