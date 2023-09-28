@@ -31,9 +31,9 @@ public class US06_TC04 {
         alloverPage.AddToCardDogrulama.click();
         alloverPage.CardView.click();
         alloverPage.CardView2.click();
-        int before = Integer.parseInt(String.valueOf(Driver.getDriver().findElement(By.xpath("CardPlusMinus")).getText()));
+        int before = Integer.parseInt("CardPlusMinus");
         Driver.getDriver().findElement(By.xpath("CardPlus")).click();
-        int after = Integer.parseInt(String.valueOf(Driver.getDriver().findElement(By.xpath("CardPlusMinus")).getText()));
+        int after = Integer.parseInt("CardPlusMinus");
         Assert.assertEquals(after,before + 1,"urun sayisi artip azaliyor");
 
 
