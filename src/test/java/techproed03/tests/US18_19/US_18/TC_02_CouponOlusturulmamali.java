@@ -9,13 +9,13 @@ import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
 
-public class TC_02 {
+public class TC_02_CouponOlusturulmamali {
 
     @Test
     public void test01() {
 
         //Siteye git
-        Driver.getDriver().get(ConfigReader.getProperty("AlloverUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("AlloverUrlIlyas"));
 
         //SingIn butonunu  tikla
         AlloverPage alloverPage=new AlloverPage();
