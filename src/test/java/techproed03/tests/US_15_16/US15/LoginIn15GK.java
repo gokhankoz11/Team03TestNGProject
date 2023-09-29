@@ -1,4 +1,4 @@
-package techproed03.tests.US_15_16;
+package techproed03.tests.US_15_16.US15;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,9 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import techproed03.pages.AlloverPage;
@@ -20,13 +17,11 @@ import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Random;
 
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
-
-public abstract class LoginInGK {
+public abstract class LoginIn15GK {
 
 
-    @BeforeClass
-    public void loginIn() throws InterruptedException, FileNotFoundException {
+
+    public void loginIn15() throws InterruptedException, FileNotFoundException {
         Driver.getDriver().get(ConfigReader.getProperty("allerCommerceUrlGK"));
         ReusableMethods.bekle(2);
         AlloverPage alloverPageGK = new AlloverPage();
