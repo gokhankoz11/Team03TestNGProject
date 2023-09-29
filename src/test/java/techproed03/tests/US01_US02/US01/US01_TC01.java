@@ -40,7 +40,7 @@ public class US01_TC01 {
         String userName=fakeMail.substring(0,indexOfPoint);
         homePage.usernameTabAyse.sendKeys(userName);
 
-        homePage.passwordTabAyse.sendKeys(ConfigReader.getProperty("password"));
+        homePage.passwordTabAyse.sendKeys(ConfigReader.getProperty("passwordAyse"));
 
         //I agree to the privacy policy checkbox'i secer
         homePage.registerPolicyAyse.click();
