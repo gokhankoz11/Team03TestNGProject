@@ -5,7 +5,10 @@ import techproed03.tests.US_15_16.LoginInGK;
 
 public class US15_TC05 extends LoginInGK {
     @Test
-    public void testCase05() {
-        testShipping("5","2","3","5");
+    public void testCase06() {
+        // Shipping islemleri  zorunlu alanlar dolduruldugunda  gerceklesir
+        // ("Weight (kg)", "Dimensions (cm)", "Shipping class", "Processing Time")
+        testShipping("10","10","10","10");
+
     }
 }

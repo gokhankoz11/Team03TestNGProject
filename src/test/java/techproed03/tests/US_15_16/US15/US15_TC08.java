@@ -4,9 +4,12 @@ import org.testng.annotations.Test;
 import techproed03.tests.US_15_16.LoginInGK;
 
 public class US15_TC08 extends LoginInGK {
+
+
     @Test
     public void testCase09() {
-        testAttributes("as");
+        // Attributes islemleri  zorunlu alanlar doldurulmadan   gerceklesmeli   ("Color", "Size")
 
+        testAttributes("");
     }
 }

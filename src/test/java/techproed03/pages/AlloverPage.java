@@ -452,8 +452,12 @@ public class AlloverPage {
     @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[5]") public WebElement attributesGK2;
 
     @FindBy(css = "#attributes_is_active_1") public WebElement colorGK;
+    @FindBy(xpath = "//input[@id='attributes_is_active_1']") public WebElement colorGK2;
+    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK3;
     @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[2]") public WebElement colorMenuGK2;
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK;
+    @FindBy(css = "//*[@id='select2-attributes_value_1-result-5btq-711']") public WebElement aaColorGK;
+    @FindBy(xpath = "(//*[text()='Add New'])[2]") public WebElement addNewColorGK;
     @FindBy(css = "#attributes_is_active_2") public WebElement sizeGK;
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[3]") public WebElement sizeMenuGK;
     @FindBy(xpath = "(//*[text()='Add'])[3]") public WebElement addGK;
