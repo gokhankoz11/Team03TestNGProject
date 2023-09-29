@@ -31,6 +31,7 @@ public class US17_TC01 {
 
         alloverPage.checkoutButton_rk.click();
 
+        // Siparis verilip verilmedigi dogrulanir
 
         Assert.assertTrue(alloverPage.orderReviewHeading_rk.isDisplayed());
 
