@@ -332,12 +332,22 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
     @FindBy(xpath = "//*[@class='product-quantity']") public WebElement CardPlusMinus;
     @FindBy(xpath = "//*[@class='quantity-plus w-icon-plus']") public WebElement CardPlus;
-    @FindBy(xpath = "//*[@class='quantity-minus w-icon-minus']") public WebElement CardMinus;
     @FindBy(xpath = "//*[@class='w-icon-cart']") public WebElement CardView;
     @FindBy(xpath = "//*[@class='button wc-forward']") public  WebElement CardView2;
-
-
-
+    @FindBy(xpath = "//*[@class='button checkout wc-forward']") public WebElement CheckoutMerve;
+    @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement BillingDetailsM;
+    @FindBy(xpath = "//*[@id='payment']") public WebElement PaymentMethodsM;
+    @FindBy(xpath = "//*[@id='main']") public WebElement OrderCompleteM;
+    @FindBy(xpath = "//*[@class='input-text ']") public WebElement FirstNameM;
+    @FindBy(xpath = "//*[@id='billing_last_name']") public WebElement LastNameM;
+    @FindBy(xpath = "//*[@class='select2-selection__rendered']") public WebElement CountryM;
+    @FindBy(xpath = "//*[@id='billing_address_1']") public WebElement StreetAddressM;
+    @FindBy(xpath = "//*[@id='billing_postcode']") public WebElement ZipCodeM;
+    @FindBy(xpath = "//*[@id='billing_city']") public WebElement CityM;
+    @FindBy(xpath = "//*[@id='billing_phone']") public WebElement PhoneM;
+    @FindBy(xpath = "//*[@id='billing_email']")public WebElement EmailM;
+    @FindBy(xpath = "//*[@id='place_order']") public WebElement PlaceOrderM;
+    @FindBy(xpath = "//*[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']") public WebElement AlisverisBitti;
 
     //Gökhan - 310
     @FindBy(xpath ="//span[.='Sign In']")
