@@ -361,7 +361,14 @@ public class AlloverPage {
     @FindBy(xpath = "//span[@class='wcfm_sub_menu_items wcfm_sub_menu_items_product_manage moz_class']")
     public WebElement addNewGK;
 
+    @FindBy(xpath = "//*[text()='Simple Product']")
+    public WebElement simpleProductGK;
 
+    @FindBy(css = "#regular_price")
+    public WebElement priceGK;
+
+    @FindBy(css = "#sale_price")
+    public WebElement salePriceGK;
     @FindBy(css = "#pro_title")
     public WebElement producktTitleGK;
 
