@@ -22,9 +22,9 @@ import java.util.List;
 
 
 public class ReusableMethods {
-    static ExtentReports extentReport;//-->raporlamayı başlatır
-    static ExtentHtmlReporter extentHtmlReporter;//-->Html formatında rapor oluşturur
-    static ExtentTest extentTest;//-->Test adımlarına bilgi eklenir
+    ExtentReports extentReport;//-->raporlamayı başlatır
+    ExtentHtmlReporter extentHtmlReporter;//-->Html formatında rapor oluşturur
+    ExtentTest extentTest;//-->Test adımlarına bilgi eklenir
 
 
 
@@ -215,7 +215,7 @@ public class ReusableMethods {
         }
     }
     //Extent Report
-    public static void rapor(String browser,String reportName){
+    public void rapor(String browser,String reportName){
         extentReport = new ExtentReports();
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "target/extentReport/report"+tarih+".html";
@@ -227,6 +227,8 @@ public class ReusableMethods {
         extentHtmlReporter.config().setDocumentTitle("ExtentReport");
         extentHtmlReporter.config().setReportName(reportName);
         extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
-    }
+  
 
+ }
 }
+
