@@ -12,6 +12,7 @@ public class TC001 {
     public void negativeTest() {
 
         //Kullanici olarak giris yapiniz
+        ReusableMethods.rapor("chorme","Billing Adress Testi");
         MyMethod.userLoginMethod();
         ReusableMethods.bekle(3);
 
