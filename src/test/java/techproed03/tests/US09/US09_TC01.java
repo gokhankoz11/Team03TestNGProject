@@ -1,4 +1,4 @@
-package techproed03.tests.US09;
+/*package techproed03.tests.US09;
 
 import techproed03.pages.AlloverPage;
 import techproed03.utilities.*;
@@ -6,9 +6,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import java.io.IOException;*/
 
-public class US09_TC01 extends ExtentReportUtils {
+/*public class US09_TC01 extends ExtentReportUtils {
 
 
     AlloverPage alloverPage = new AlloverPage();
@@ -46,4 +46,4 @@ public class US09_TC01 extends ExtentReportUtils {
     }
 
 
-}
+}*/

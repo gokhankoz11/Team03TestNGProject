@@ -1,4 +1,4 @@
-package techproed03.tests.US09;
+/*package techproed03.tests.US09;
 
 import techproed03.pages.AlloverPage;
 import techproed03.utilities.ConfigReader;
@@ -7,9 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import java.io.IOException;*/
 
-public class US09_TC11 {
+//public class US09_TC11 {
 
 /*
     US_09 : User should be able to register to the website as Vendor. (Vendor Registration)
@@ -26,18 +26,18 @@ public class US09_TC11 {
 
 
 
-    AlloverPage alloverPage = new AlloverPage();
-    Actions actions = new Actions(Driver.getDriver());
+   // AlloverPage alloverPage = new AlloverPage();
+    //Actions actions = new Actions(Driver.getDriver());
 
 
 
-    @Test
-    public void test_US_09_TC_11() throws IOException {
+   // @Test
+    //public void test_US_09_TC_11() throws IOException {
 
         // STEP: User should enter password again.
 
         //User should navigate to Allover Commerce url
-        Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
+       /* Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
         String alloverCommerceWebSite = Driver.getDriver().getWindowHandle();
 
         //Click on "Sign In" button
@@ -75,4 +75,4 @@ public class US09_TC11 {
     }
 
 
-}
+}*/

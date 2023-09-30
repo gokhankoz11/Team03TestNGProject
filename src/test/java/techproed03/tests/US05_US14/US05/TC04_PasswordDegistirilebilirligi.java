@@ -15,6 +15,7 @@ public class TC04_PasswordDegistirilebilirligi {
 
         Driver.getDriver().get(ConfigReader.getProperty("alloverUrlSuna"));
         AlloverPage alloverPage=new AlloverPage();
+        ReusableMethods.rapor("chrome","Password Degisikliginin Gerceklestiginin Dogrulanmasi ");
 
         alloverPage.ilkGirisSignInSuna.click();
         ReusableMethods.bekle(2);
@@ -25,8 +26,11 @@ public class TC04_PasswordDegistirilebilirligi {
         alloverPage.UsernameOrEmailTextBoxSuna.sendKeys(email, Keys.TAB,password,Keys.ENTER);
         ReusableMethods.bekle(2);
         ReusableMethods.click(alloverPage.myAccountLinkSuna);
+        ReusableMethods.extentTest.info("My Account butonuna tıklandı.");
         alloverPage.accountDetailsLinkSuna.click();
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Account details butonuna tıklandı.");
+        alloverPage.firstNameSuna.clear();
         alloverPage.firstNameSuna.sendKeys("Ayse",Keys.ARROW_RIGHT);
         ReusableMethods.bekle(2);
         alloverPage.lastNameSuna.clear();
@@ -37,10 +41,16 @@ public class TC04_PasswordDegistirilebilirligi {
         alloverPage.displayNameSuna.sendKeys("Ayse",Keys.ENTER);
         ReusableMethods.scroll(alloverPage.currentPasswordSuna);
         ReusableMethods.click(alloverPage.currentPasswordSuna);
+
         alloverPage.currentPasswordSuna.sendKeys(ConfigReader.getProperty("currentPassword"),Keys.TAB);
+        ReusableMethods.extentTest.info("Current Passwort alanina mevcut sifre girildi");
         alloverPage.newPasswordSuna.sendKeys(ConfigReader.getProperty("newPasswort"),Keys.TAB);
+        ReusableMethods.extentTest.info("New Passwort alanina yeni bir sifre girildi");
         alloverPage.confirmPasswordSuna.sendKeys(ConfigReader.getProperty("confirmPasswort"),Keys.ENTER);
+        ReusableMethods.extentTest.info("Confirm Passwort alanina yeni sifre tekrar girildi");
         ReusableMethods.click(alloverPage.saveChangesButtonSuna);
         Assert.assertTrue(alloverPage.basariliYazisi2Suna.isDisplayed());
+        ReusableMethods.extentTest.info("Sifrenin degistirilebildigi dogrulandi");
+        ReusableMethods.extentReport.flush();
     }
 }
