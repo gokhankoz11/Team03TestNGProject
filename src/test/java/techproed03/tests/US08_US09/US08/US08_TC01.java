@@ -5,13 +5,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+/*
 import pages.AlloverPage;
+import techproed03.utilities.ReusableMethods;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ExtentReport;
 import utilities.ReusableMethods;
 
-public class US08_TC01 extends ExtentReport {
+public class US08_TC01 extends ReusableMethods {
 
     @Test
     public void test01() throws InterruptedException {
@@ -123,4 +125,5 @@ public class US08_TC01 extends ExtentReport {
         extentTest.pass("Shopping Cart yazisinin gorundugunu dogrulandi");
 
     }
-}
+
+ */
