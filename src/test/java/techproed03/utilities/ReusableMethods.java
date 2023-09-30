@@ -22,9 +22,9 @@ import java.util.List;
 
 
 public class ReusableMethods {
-   static ExtentReports extentReport;//-->raporlamayı başlatır
-    static ExtentHtmlReporter extentHtmlReporter;//-->Html formatında rapor oluşturur
-    static ExtentTest extentTest;//-->Test adımlarına bilgi eklenir
+  public static ExtentReports extentReport;//-->raporlamayı başlatır
+    public static ExtentHtmlReporter extentHtmlReporter;//-->Html formatında rapor oluşturur
+    public static ExtentTest extentTest;//-->Test adımlarına bilgi eklenir
 
 
 
