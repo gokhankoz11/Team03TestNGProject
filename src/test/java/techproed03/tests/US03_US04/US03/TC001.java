@@ -7,7 +7,6 @@ import techproed03.pages.AlloverPage;
 import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
 
-
 public class TC001 {
     @Test
     public void negativeTest() {
@@ -15,6 +14,7 @@ public class TC001 {
         //Kullanici olarak giris yapiniz
         MyMethod.userLoginMethod();
         ReusableMethods.bekle(3);
+
 
         //My Account alanina tiklayiniz
         AlloverPage alloverPage=new AlloverPage();
