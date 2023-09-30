@@ -3,7 +3,6 @@ package techproed03.tests.US09;
 import techproed03.pages.AlloverPage;
 import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
-import techproed03.utilities.JSUtils;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
