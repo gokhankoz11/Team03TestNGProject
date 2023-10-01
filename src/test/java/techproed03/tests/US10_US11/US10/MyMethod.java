@@ -1,13 +1,15 @@
-package techproed03.utilities;
+package techproed03.tests.US10_US11.US10;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
+import techproed03.pages.AlloverPage;
+import techproed03.utilities.ConfigReader;
+import techproed03.utilities.Driver;
+import techproed03.utilities.ReusableMethods;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
@@ -20,17 +22,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
-public class ReusableMethods {
-    ExtentReports extentReport;//-->raporlamayı başlatır
-    ExtentHtmlReporter extentHtmlReporter;//-->Html formatında rapor oluşturur
-    ExtentTest extentTest;//-->Test adımlarına bilgi eklenir
-
-
-
-
-
-
+public class MyMethod
+{
 
     //HARD WAIT METHOD
     public static void bekle(int saniye) {
@@ -214,35 +207,24 @@ public class ReusableMethods {
 
         }
     }
-    //Extent Report
-    public void rapor(String browser,String reportName){
-        extentReport = new ExtentReports();
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "target/extentReport/report"+tarih+".html";
-        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
-        extentReport.attachReporter(extentHtmlReporter);
-        //Raporda gözükmesini istediğimiz bilgiler
-        extentReport.setSystemInfo("Tester","Team03Members");
-        extentReport.setSystemInfo("browser",browser);
-        extentHtmlReporter.config().setDocumentTitle("ExtentReport");
-        extentHtmlReporter.config().setReportName(reportName);
-        extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
+
+
+    public static void vendorKayit() {
+        //Anasayfaya git
+        Driver.getDriver().get(ConfigReader.getProperty("alloverUrlHkn"));
+        ReusableMethods.tumSayfaResmi("AnaSayfa");
+        //Register butonuna tikla
+        AlloverPage page = new AlloverPage();
+        page.registerButonuHkn.click();
+        ReusableMethods.bekle(2);
+        //Çıkan ekranda "Become a Vendor" yazısının göründüğünü doğrula.
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(page.becomeVendorHkn.isDisplayed());
+        //Çıkan ekranda "Become a Vendor" butonuna tıkla.
+        page.becomeVendorHkn.click();
+        //Vendor Registration sayfasını doğrula.
+        softAssert.assertEquals(ConfigReader.getProperty("vendorSayfasi"), page.vendorRegistrationYazisiHkn.getText());
+
     }
 
-
-    //WebElement ScreenShot
-    public static void webElementResmi2(WebElement element,String className) {
-        String elementClass = element.getAttribute("class");
-
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaAdi = className + "_Class'ı" + "_webElementScreenshot" + elementClass + tarih + ".png";
-        String dosyaYolu = "TestOutput/screenshot/" + dosyaAdi;
-        //String dosyaYolu = "TestOutput/screenshot/webElementScreenshot" + tarih + ".png";
-
-        try {
-            FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
