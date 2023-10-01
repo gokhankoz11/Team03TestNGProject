@@ -14,6 +14,22 @@ public class FakeMailPage {
     @FindBy(xpath = "//*[@id='email']")
     public WebElement fakeMailAyse;
 
+//Sedat
+
+
+    @FindBy(id = "email")
+    public static WebElement email;
+
+    @FindBy(xpath = "a//[@title='Refresh mailbox']")
+    public WebElement refresh;
+
+
+    @FindBy(xpath = "//*[contains(text(), 'Email Verification Code')]")
+    public WebElement verificationCodeText;
+
+
+
+
 
 
 

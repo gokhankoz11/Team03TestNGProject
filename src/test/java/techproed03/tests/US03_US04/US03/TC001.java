@@ -7,14 +7,15 @@ import techproed03.pages.AlloverPage;
 import techproed03.utilities.Driver;
 import techproed03.utilities.ReusableMethods;
 
-
 public class TC001 {
     @Test
     public void negativeTest() {
 
         //Kullanici olarak giris yapiniz
+        ReusableMethods.rapor("chorme","Billing Adress Testi");
         MyMethod.userLoginMethod();
         ReusableMethods.bekle(3);
+
 
         //My Account alanina tiklayiniz
         AlloverPage alloverPage=new AlloverPage();

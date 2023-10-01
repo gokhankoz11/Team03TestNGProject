@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import techproed03.utilities.Driver;
 
-import java.util.List;
-
 
 public class AlloverPage {
     public AlloverPage(){
@@ -294,7 +292,87 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@data-id='billing_phone']") public WebElement phoneAlert_ofa;
 
     //Ridvan - 250
+    @FindBy(xpath = "(//*[@class='w-icon-account'])[1]")
+    public WebElement signinButton_rk;
 
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement emailBox_rk;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement passwordBox_rk;
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement girisButonu_rk;
+
+    @FindBy(xpath = "//*[@class='logo']")
+    public WebElement anasayfaLogo_rk;
+
+    @FindBy(xpath = "//*[@id='menu-item-1079']")
+
+    public WebElement myAccountButton_rk;
+
+    @FindBy(xpath = "//*[@href='https://allovercommerce.com/store-manager/']")
+    public WebElement storeManagerButton_rk;
+
+    @FindBy(xpath = "//*[@class='wcfmfa fa-gift'] ")
+    public WebElement couponButton_rk;
+    @FindBy(xpath = "(//*[@class='text'])[18]")
+    public WebElement addNewCouponButton_rk;
+    @FindBy(xpath = "//*[@class='showcoupon']")
+    public WebElement enterYourCoupon_rk;
+
+    @FindBy(xpath = "//*[@class='btn button btn-rounded btn-default']")
+    public WebElement applyCouponButton_rk;
+
+    @FindBy(xpath = "//*[@id='coupon_code']")
+    public WebElement couponCodeBox_rk;
+
+    @FindBy(xpath = "(//*[@class='wcfm-text wcfm_ele'])[1]")
+    public WebElement codeCouponBox_rk;
+
+    @FindBy(xpath="//*[@id='coupon_amount']")
+    public WebElement couponAmountBox_rk;
+
+    @FindBy(xpath = "//*[@id='expiry_date']")
+    public WebElement couponExpiryDateBox_rk;
+    @FindBy(xpath = "(//input)[7]")
+    public WebElement freeShippingBox_rk;
+
+    // @FindBy(xpath = "//*[@class='wcfm-container wcfm-top-element-container']")
+    //      public WebElement addCouponGorulmeli_rk;
+
+    @FindBy(xpath = "(//*[@class='w-icon-cart'])[1]")
+    public WebElement cartButton_rk;
+
+    @FindBy(xpath="//*[@class='button checkout wc-forward']")
+    public WebElement checkoutButton_rk;
+    @FindBy(xpath = "//*[@class='checkout_coupon woocommerce-form-coupon']//p")
+    public WebElement applyText_rk;
+    @FindBy(xpath = "(//*[@type='submit'])[2]")
+    public WebElement applyCoupon_rk;
+
+    @FindBy(xpath = "//h3[1]")
+    public WebElement billingsDetail_rk;
+
+    @FindBy(xpath = "//*[@id='order_review_heading']")
+    public WebElement orderReviewHeading_rk;
+
+    @FindBy(xpath = "//*[@class='order-total']")
+    public WebElement orderTotal_rk;
+
+    @FindBy(xpath = "(//*[@class='input-radio'])[1]")
+    public WebElement wireTransfer_rk;
+
+    @FindBy(xpath = "//*[@name='woocommerce_checkout_place_order']")
+    public  WebElement placeOrderButton_rk;
+    @FindBy(xpath= "//*[@name='coupon_code']")
+    public WebElement getCouponCodeBox_rk;
+    @FindBy(xpath = "//*[@role='alert']")
+    public WebElement alertButton_rk;
+
+    @FindBy(xpath = "//*[@class='woocommerce-order']//p")
+    public WebElement thankyou_rk;
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement orderDetails_rk;
 
 
 
@@ -429,7 +507,7 @@ public class AlloverPage {
     @FindBy(css = "#stock_qty")
     public WebElement stockQtyGK;
 
-    @FindBy(xpath = "#wcfm_products_manage_form_advanced_head")
+    @FindBy(css = "#wcfm_products_manage_form_advanced_head")
     public WebElement advancedGK;
 
     @FindBy(css = "#wcfm_products_simple_draft_button")
@@ -473,25 +551,14 @@ public class AlloverPage {
     @FindBy(css = "#attributes_is_active_1") public WebElement colorGK;
     @FindBy(xpath = "//input[@id='attributes_is_active_1']") public WebElement colorGK2;
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK3;
-    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK2;
-    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement   colorMenuGK;
-    @FindBy(css = "//*[@id='select2-attributes_value_1-result-5btq-711']") public WebElement aaColorGK;
-
-    @FindBy(xpath = "//*[@class='button wcfm_add_attribute_term wcfm_select_all_attributes']") public WebElement selectAllGK;
-
-
-    @FindBy(xpath = "(//*[@title='Toggle Block'])[2]") public WebElement okButtonGK;
-    @FindBy(xpath = "//*[@class='fields_collapser attributes_collapser wcfmfa fa-arrow-circle-down fa-arrow-circle-up']") public WebElement okSizeButtonGK;
-
+    @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[2]") public WebElement colorMenuGK2;
+    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK;
+    @FindBy(xpath = "//*[@id='select2-attributes_value_1-result-5btq-711']") public WebElement aaColorGK;
     @FindBy(xpath = "(//*[text()='Add New'])[2]") public WebElement addNewColorGK;
     @FindBy(css = "#attributes_is_active_2") public WebElement sizeGK;
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[3]") public WebElement sizeMenuGK;
     @FindBy(xpath = "(//*[text()='Add'])[3]") public WebElement addGK;
     @FindBy(css = "#attributes_name_4") public WebElement addNameGK;
-
-    @FindBy(css = "wcfmfa fa-eye text_tip") public WebElement viewsButtonGK;
-    @FindBy(css = ".view_count") public WebElement viewsButtonGK2;
-    @FindBy(xpath = "//h1") public WebElement urunTitleGK;
 
 
 
