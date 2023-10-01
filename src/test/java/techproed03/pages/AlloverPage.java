@@ -318,7 +318,7 @@ public class AlloverPage {
     @FindBy(xpath = "//input[@id='username']") public WebElement UserNameOrEmailAddress;
     @FindBy(xpath = "//input[@id='password']") public WebElement PasswordM;
     @FindBy(xpath = "//*[@type='submit']") public WebElement SignInButtonMerve2;
-    @FindBy(xpath = "//input[@type='search']") public WebElement SearchButtonMerve;
+    @FindBy(xpath = "(//*[@type='search'])[1]") public WebElement SearchButtonMerve;
     @FindBy(xpath = "//*[.='Electric Rice-Cooker']") public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']") public WebElement AddToCardMerve;
     @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
@@ -340,6 +340,15 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@id='billing_email']")public WebElement EmailM;
     @FindBy(xpath = "//*[@id='place_order']") public WebElement PlaceOrderM;
     @FindBy(xpath = "//*[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']") public WebElement AlisverisBitti;
+    @FindBy(xpath = "//*[.='Compare']") public WebElement CompareM;
+    @FindBy(xpath = "//*[.='Search results for “bag”']") public WebElement BagSonucM;
+    @FindBy(xpath = "//*[@id='main']") public WebElement AnaSayfaM;
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[2]/div/figure/div/a[2]") public WebElement Terazi1;
+
+
+
+
+
 
     //Gökhan - 310
     @FindBy(xpath ="//span[.='Sign In']")
