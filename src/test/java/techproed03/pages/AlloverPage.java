@@ -564,9 +564,7 @@ public class AlloverPage {
     @FindBy(xpath = "(//*[@title='Toggle Block'])[2]") public WebElement okButtonGK;
     @FindBy(xpath = "//*[@class='fields_collapser attributes_collapser wcfmfa fa-arrow-circle-down fa-arrow-circle-up']") public WebElement okSizeButtonGK;
 
-    @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[2]") public WebElement colorMenuGK2;
-    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK;
-    @FindBy(xpath = "//*[@id='select2-attributes_value_1-result-5btq-711']") public WebElement aaColorGK;
+
 
     @FindBy(xpath = "(//*[text()='Add New'])[2]") public WebElement addNewColorGK;
     @FindBy(css = "#attributes_is_active_2") public WebElement sizeGK;
