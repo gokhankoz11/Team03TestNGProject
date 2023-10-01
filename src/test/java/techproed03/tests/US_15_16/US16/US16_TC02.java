@@ -9,7 +9,9 @@ public class US16_TC02 extends LoginIn16GK {
 
     @Test
     public void testCase02() throws FileNotFoundException, InterruptedException {
-        loginIn16("as","100","90");
+
+      //  Simple Products islemleri zorunlu alanlar doldurulmadan  gerceklesmez
+        loginIn16("","","");
         fotoEklemeSubmitGK();
     }
 }

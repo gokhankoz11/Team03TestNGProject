@@ -11,6 +11,7 @@ public class US15_TC07 extends LoginIn15GK {
 
         loginIn15();
         testAttributes("as");
+        productteUrunGorme("as");
 
     }
 }
