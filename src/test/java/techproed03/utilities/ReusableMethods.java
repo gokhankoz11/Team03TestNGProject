@@ -221,6 +221,7 @@ public class ReusableMethods {
         String dosyaYolu = "target/extentReport/report"+tarih+".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReport.attachReporter(extentHtmlReporter);
+
         //Raporda gözükmesini istediğimiz bilgiler
         extentReport.setSystemInfo("Tester","Team03Members");
         extentReport.setSystemInfo("browser",browser);
