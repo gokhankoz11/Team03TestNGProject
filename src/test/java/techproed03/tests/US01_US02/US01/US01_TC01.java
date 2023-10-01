@@ -7,6 +7,7 @@ import techproed03.pages.AlloverPage;
 import techproed03.pages.FakeMailPage;
 import techproed03.utilities.ConfigReader;
 import techproed03.utilities.Driver;
+import techproed03.utilities.ReusableMethods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class US01_TC01 {
         Driver.getDriver().get(ConfigReader.getProperty("fakeMailUrl"));
         fakeMailPage.constentAyse.click();
 
+
         //Username kutusuna bir kullanici adi girer
         //Your Email address kutusuna gecerli bir email girer
         //Password kutusuna bir sifre girer
@@ -36,11 +38,12 @@ public class US01_TC01 {
         Driver.getDriver().switchTo().window(windows.get(0));
         homePage.emailTabAyse.sendKeys(fakeMail);
 
+
         int indexOfPoint=fakeMail.indexOf(".");
         String userName=fakeMail.substring(0,indexOfPoint);
         homePage.usernameTabAyse.sendKeys(userName);
 
-        homePage.passwordTabAyse.sendKeys(ConfigReader.getProperty("password"));
+        homePage.passwordTabAyse.sendKeys(ConfigReader.getProperty("passwordAyse"));
 
         //I agree to the privacy policy checkbox'i secer
         homePage.registerPolicyAyse.click();
