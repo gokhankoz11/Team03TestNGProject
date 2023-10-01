@@ -340,12 +340,8 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@id='billing_email']")public WebElement EmailM;
     @FindBy(xpath = "//*[@id='place_order']") public WebElement PlaceOrderM;
     @FindBy(xpath = "//*[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']") public WebElement AlisverisBitti;
-    @FindBy(xpath = "//*[.='Compare']") public WebElement CompareM;
-    @FindBy(xpath = "//*[.='Search results for “bag”']") public WebElement BagSonucM;
+    @FindBy(xpath = "//*[@class='btn btn-dark btn-rounded']") public WebElement CompareM;
     @FindBy(xpath = "//*[@id='main']") public WebElement AnaSayfaM;
-    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[2]/div/figure/div/a[2]") public WebElement Terazi1;
-
-
 
 
 
