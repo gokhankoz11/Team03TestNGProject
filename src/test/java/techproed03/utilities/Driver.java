@@ -16,7 +16,7 @@ import java.time.Duration;
         SINGLETON PATTERN (Tekli kullanım) için gizli const.'ı private yaptık
          */
         }
-        static WebDriver driver;
+        public static WebDriver driver;
         public static WebDriver getDriver(){
         /*
             Driver'i her çağırdığımızda yeni bir pencere açmamasi için bir if bloğu ile bu işi çözdük.

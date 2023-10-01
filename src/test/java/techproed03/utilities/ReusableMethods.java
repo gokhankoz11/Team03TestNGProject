@@ -2,7 +2,7 @@ package techproed03.utilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.observer.ExtentObserver;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,7 +20,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
 public class ReusableMethods {
+  public static ExtentReports extentReport;//-->raporlamayı başlatır
+    public static ExtentHtmlReporter extentHtmlReporter;//-->Html formatında rapor oluşturur
+    public static ExtentTest extentTest;//-->Test adımlarına bilgi eklenir
+
+
 
 
 
@@ -208,6 +214,22 @@ public class ReusableMethods {
 
         }
     }
+    //Extent Report
+    public static void rapor(String browser,String reportName){
+        extentReport = new ExtentReports();
+        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+        String dosyaYolu = "target/extentReport/report"+tarih+".html";
+        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
+        extentReport.attachReporter(extentHtmlReporter);
 
+        //Raporda gözükmesini istediğimiz bilgiler
+        extentReport.setSystemInfo("Tester","Team03Members");
+        extentReport.setSystemInfo("browser",browser);
+        extentHtmlReporter.config().setDocumentTitle("ExtentReport");
+        extentHtmlReporter.config().setReportName(reportName);
+        extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
+  
 
+ }
 }
+
