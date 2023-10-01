@@ -208,10 +208,26 @@ public class AlloverPage {
     @FindBy(xpath = "//a[text()='My Account']") public WebElement myAccountLinkSuna; @FindBy(xpath = "//a[text()='Account details']") public WebElement accountDetailsLinkSuna;
     @FindBy(xpath = "(//h4)[2]") public WebElement accountDetailsBasligiSuna; @FindBy(css="#account_first_name") public WebElement firstNameSuna;
     @FindBy(css="#account_last_name") public WebElement lastNameSuna; @FindBy(css="#account_display_name") public WebElement displayNameSuna;
-    @FindBy(css="#account_email") public WebElement emailAdressSuna; @FindBy(xpath="//button[@name='save_account_details']") public WebElement saveChangesButtonSuna;
-    @FindBy(xpath = "//*[@role='alert']") public WebElement basariliYazisi1Suna; @FindBy(xpath = "//*[@id='tinymce']") public WebElement biographyBolumuSuna;
+    @FindBy(css="#account_email") public WebElement emailAdressSuna; @FindBy(xpath="(//*[@type='submit'])[2]") public WebElement saveChangesButtonSuna;
+    @FindBy(xpath = "//*[@role='alert']") public WebElement basariliYazisi1Suna; @FindBy(xpath = "//body[@id='tinymce']") public WebElement biographyBolumuSuna;
     @FindBy(css = "#password_current") public WebElement currentPasswordSuna; @FindBy(css = "#password_1") public WebElement newPasswordSuna;
-    @FindBy(css = "#password_2") public WebElement confirmPasswordSuna; @FindBy(xpath = "//*[@class='page-title-bar']") public WebElement basariliYazisi2Suna;
+    @FindBy(css = "#password_2") public WebElement confirmPasswordSuna; @FindBy(xpath = "//*//*[@role='alert']") public WebElement basariliYazisi2Suna;
+    @FindBy(xpath = "//a[text()='Store Manager']") public WebElement storeManagerButtonSuna; @FindBy(xpath = "(//span[@class='text'])[4]") public WebElement productsSuna;
+    @FindBy(xpath = "(//div//span//a)[2]") public WebElement productsAddNewSuna; @FindBy(css="#product_type") public WebElement productTypeOptionsSuna;
+    @FindBy(css ="#featured_img_display") public WebElement buyukResimKutusuSuna; @FindBy(css = "#__wp-uploader-id-1") public WebElement selectFilesSuna;
+    @FindBy(xpath = "(//button[@type='button'])[83]") public WebElement buyukResimSelectSuna; @FindBy(css = "#pro_title") public WebElement productTitleSuna;
+
+    @FindBy(xpath = "(//body[@id='tinymce'])[1]") public WebElement shortDescriptionSuna; @FindBy(xpath = "//body[@data-id='description']") public WebElement descriptionSuna;
+    @FindBy(xpath = "//div[@class='wcfm_product_manager_cats_checklist_fields']") public List<WebElement> categoriesListSuna;
+    @FindBy(xpath = "(//span[@class='wcfmfa fa-arrow-circle-right sub_checklist_toggler'])[2]") public List<WebElement> categoriesOklariSuna;
+    @FindBy(xpath = "(//*[@class='description wcfm_full_ele wcfm_side_add_new_category wcfm_add_new_category wcfm_add_new_taxonomy'])[1]") public WebElement addNewCategorySuna;
+    @FindBy(css = "#wcfm_new_cat") public WebElement categoryNameBoxSuna; @FindBy(xpath = "//*[@id='wcfm_new_parent_cat']") public WebElement parentCategorySuna;
+    @FindBy(xpath = "(//*[text()='Add'])[1]") public WebElement addParentCategorySuna; @FindBy(xpath = "(//*[text()='Product brands'])[1]") public WebElement productBrandsBoxSuna;
+
+    @FindBy(xpath = "//*[@class='wcfm-checkbox checklist_type_product_brand ']") public List<WebElement> productBrandsListSuna;
+    @FindBy(xpath = "(//span[@class='wcfmfa fa-arrow-circle-right sub_checklist_toggler'])") public List<WebElement> productBrandsOklariSuna;
+    @FindBy(xpath = "//*[text()='+Add new Product brands']") public WebElement addNewProductBrandsSuna; @FindBy(xpath = "//input[@name='wcfm_new_product_brand']") public WebElement productBrandsNameBoxSuna;
+    @FindBy(xpath = "//*[@name='wcfm_new_parent_product_brand']") public WebElement parentTaxonomySuna; @FindBy(xpath = "(//*[text()='Add'])[2]") public WebElement addButtonProductBrandsSuna2;
 
 
 
@@ -219,7 +235,7 @@ public class AlloverPage {
 
 
 
-    @FindBy(xpath = "//*[@id='billing_email']") public WebElement billingEMailKutusuNT;
+    // @FindBy(xpath = "//*[@id='billing_email']") public WebElement billingEMailKutusuNT;
 
 
 

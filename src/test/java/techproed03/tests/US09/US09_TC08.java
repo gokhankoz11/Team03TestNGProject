@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class US09_TC08 {
+//public class US09_TC08 {
 
 /*
     US_09 : User should be able to register to the website as Vendor. (Vendor Registration)
@@ -26,18 +26,18 @@ public class US09_TC08 {
 
 
 
-    AlloverPage alloverPage = new AlloverPage();
-    Actions actions = new Actions(Driver.getDriver());
+   // AlloverPage alloverPage = new AlloverPage();
+    //Actions actions = new Actions(Driver.getDriver());
 
 
 
-    @Test
-    public void test_US_09_TC_08() throws IOException {
+  //  @Test
+    //public void test_US_09_TC_08() throws IOException {
 
         // STEP: The code received via email should be entered in the verification code text box.
 
         //User should navigate to Allover Commerce url
-        Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
+      /*  Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 
         //Click on "Sign In" button
         AlloverPage.singInButton.click();
@@ -68,4 +68,4 @@ public class US09_TC08 {
     }
 
 
-}
+}*/

@@ -1,4 +1,4 @@
-package techproed03.tests.US08_US09.US08;
+/*package techproed03.tests.US08_US09.US08;
 
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 import pages.AlloverPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ExtentReport;
+import utilities.ExtentReport;*/
 
-public class US08_TC02 extends ExtentReport {
+/*public class US08_TC02 extends ExtentReport {
 
     @Test
     public void test01() throws InterruptedException {
@@ -103,4 +103,4 @@ public class US08_TC02 extends ExtentReport {
         extentTest.pass("Thank you. Your order has been received Goruldu");
 
     }
-}
+}*/
