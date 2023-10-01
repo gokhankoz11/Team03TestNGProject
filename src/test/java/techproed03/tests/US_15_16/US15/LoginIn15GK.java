@@ -1,9 +1,8 @@
 package techproed03.tests.US_15_16.US15;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.apache.xmlbeans.impl.xb.xsdschema.All;
+import org.openqa.selenium.*;
+import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
@@ -18,7 +17,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class LoginIn15GK {
-
+    Actions actionsGK = new Actions(Driver.getDriver());
 
 
     public void loginIn15() throws InterruptedException, FileNotFoundException {
@@ -39,7 +38,7 @@ public abstract class LoginIn15GK {
         alloverPageGK.storeManagerGK.click();
         ReusableMethods.bekle(2);
 
-        Actions actionsGK = new Actions(Driver.getDriver());
+
         actionsGK.moveToElement(alloverPageGK.produktGK).perform();
         ReusableMethods.bekle(2);
         alloverPageGK.addNewGK.click();
@@ -84,7 +83,7 @@ public abstract class LoginIn15GK {
 
     @Test
     public void testInventory(String sku, String strockQt) {
-        AlloverPage alloverPage = new AlloverPage();
+        AlloverPage alloverPageGK = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
 
@@ -93,101 +92,137 @@ public abstract class LoginIn15GK {
         SoftAssert softAssert = new SoftAssert();
         // ReusableMethods.scroll(alloverPage.skuGK);
         ReusableMethods.bekle(2);
-        ReusableMethods.visibleWait(alloverPage.skuGK, 10);
-        ReusableMethods.sendKeysJS(alloverPage.skuGK, sku);
-        softAssert.assertTrue(alloverPage.skuGK.isSelected());
-        ReusableMethods.click(alloverPage.manageStockGK);
+        ReusableMethods.visibleWait(alloverPageGK.skuGK, 10);
+        ReusableMethods.sendKeysJS(alloverPageGK.skuGK, sku);
+        softAssert.assertTrue(alloverPageGK.skuGK.isSelected());
+        ReusableMethods.click(alloverPageGK.manageStockGK);
         // ReusableMethods.scroll(alloverPage.advancedGK);
-        softAssert.assertTrue(alloverPage.manageStockGK.isSelected());
+        softAssert.assertTrue(alloverPageGK.manageStockGK.isSelected());
         //   alloverPage.manageStockGK.click();
 
-        softAssert.assertTrue(alloverPage.skuGK.isSelected());
-        ReusableMethods.sendKeysJS(alloverPage.stockQtyGK, strockQt);
+        softAssert.assertTrue(alloverPageGK.skuGK.isSelected());
+        ReusableMethods.sendKeysJS(alloverPageGK.stockQtyGK, strockQt);
 
-        softAssert.assertTrue(alloverPage.stockQtyGK.isSelected());
-        Select select = new Select(alloverPage.backOrdesGK);
+        softAssert.assertTrue(alloverPageGK.stockQtyGK.isSelected());
+        Select select = new Select(alloverPageGK.backOrdesGK);
 
         select.selectByIndex(1);
-        softAssert.assertTrue(alloverPage.backOrdesGK.isSelected());
+        softAssert.assertTrue(alloverPageGK.backOrdesGK.isSelected());
         ReusableMethods.bekle(2);
-        alloverPage.soldIndindividGK.click();
+        alloverPageGK.soldIndindividGK.click();
 
-        ReusableMethods.click(alloverPage.submitButtonGK2);
-        softAssert.assertTrue(alloverPage.successfullTextGK.isDisplayed());
+        ReusableMethods.click(alloverPageGK.submitButtonGK2);
+        softAssert.assertTrue(alloverPageGK.successfullTextGK.isDisplayed());
 
     }
 
     @Test
     public void testShipping(String weight, String lenght, String widht, String height) {
 
-        AlloverPage alloverPage = new AlloverPage();
+        AlloverPage alloverPageGK = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         SoftAssert softAssert = new SoftAssert();
-        ReusableMethods.scroll(alloverPage.submitButtonGK2);
-        ReusableMethods.click(alloverPage.shippingGK);
+        ReusableMethods.scroll(alloverPageGK.submitButtonGK2);
+        ReusableMethods.click(alloverPageGK.shippingGK);
         ReusableMethods.bekle(2);
-        softAssert.assertTrue(alloverPage.shippingGK.isDisplayed());
-        alloverPage.weightGK.sendKeys(weight, Keys.TAB, lenght, Keys.TAB, widht, Keys.TAB,
+        softAssert.assertTrue(alloverPageGK.shippingGK.isDisplayed());
+        alloverPageGK.weightGK.sendKeys(weight, Keys.TAB, lenght, Keys.TAB, widht, Keys.TAB,
                 height, Keys.TAB, Keys.TAB);
-        softAssert.assertTrue(alloverPage.weightGK.isEnabled());
-        softAssert.assertTrue(alloverPage.lenghtGK.isEnabled());
-        softAssert.assertTrue(alloverPage.widthGK.isEnabled());
-        softAssert.assertTrue(alloverPage.heightGK.isEnabled());
+        softAssert.assertTrue(alloverPageGK.weightGK.isEnabled());
+        softAssert.assertTrue(alloverPageGK.lenghtGK.isEnabled());
+        softAssert.assertTrue(alloverPageGK.widthGK.isEnabled());
+        softAssert.assertTrue(alloverPageGK.heightGK.isEnabled());
 
-        Select select = new Select(alloverPage.processingTimeGK);
+        Select select = new Select(alloverPageGK.processingTimeGK);
         select.selectByIndex(1);
-        ReusableMethods.click(alloverPage.submitButtonGK2);
-        softAssert.assertTrue(alloverPage.successfullTextGK.isDisplayed());
+        ReusableMethods.click(alloverPageGK.submitButtonGK2);
+        softAssert.assertTrue(alloverPageGK.successfullTextGK.isDisplayed());
 
     }
 
 
     @Test
     public void testAttributes(String name) {
-        AlloverPage alloverPage = new AlloverPage();
+        AlloverPage alloverPageGK = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
 
-      //  actions.sendKeys(Keys.PAGE_DOWN).perform();
-        actions.scrollToElement(alloverPage.submitButtonGK);
+        //  actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.scrollToElement(alloverPageGK.submitButtonGK);
         SoftAssert softAssert = new SoftAssert();
         // ReusableMethods.scroll(alloverPage.submitButtonGK2);
 
         ReusableMethods.bekle(2);
-        ReusableMethods.click(alloverPage.attributesGK);
+        ReusableMethods.click(alloverPageGK.attributesGK);
         ReusableMethods.bekle(3);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        js.executeScript("arguments[0].click();", alloverPage.colorGK);
+        js.executeScript("arguments[0].click();", alloverPageGK.colorGK);
 
         //  ReusableMethods.scroll(alloverPage.sizeGK);
 
 
-       js.executeScript("arguments[0].click();", alloverPage.colorMenuGK);
-        ReusableMethods.bekle(2);
-
-        List<WebElement> renkler= Driver.getDriver().findElements(By.cssSelector("#select2-attributes_value_1-results"));
-        Random random=new Random();
-        int randomColor= random.nextInt(renkler.size());
-        renkler.get(randomColor).click();
-
-       // js.executeScript("arguments[0].click();", alloverPage.aaColorGK);
-
-        ReusableMethods.scroll(alloverPage.addNewColorGK);
+        js.executeScript("arguments[0].click();", alloverPageGK.colorMenuGK);
 
         ReusableMethods.bekle(2);
+        js.executeScript("arguments[0].click();", alloverPageGK.selectAllGK);
+        ReusableMethods.bekle(2);
+        js.executeScript("arguments[0].click();", alloverPageGK.okButtonGK);
+
+        //   alloverPage.addNewColorGK.click();
+
+        // Driver.getDriver().switchTo().alert().sendKeys("siyah" + Keys.ENTER);
+
+        //  Select select=new Select(alloverPage.colorMenuGK2);
+
+        //  ReusableMethods.bekle(2);
+
+        //  select.getFirstSelectedOption();
+        //  actions.doubleClick();
 
 
+        //   List<WebElement> renkler= Driver.getDriver().findElements(By.cssSelector("#select2-attributes_value_1-results"));
+        //   Random random=new Random();
+        //  int randomColor= random.nextInt(renkler.size());
+        //  renkler.get(randomColor).click();
 
-        alloverPage.sizeGK.click();
+        // js.executeScript("arguments[0].click();", alloverPage.aaColorGK);
+
+        ReusableMethods.scroll(alloverPageGK.submitButtonGK);
+
         ReusableMethods.bekle(2);
 
+
+        js.executeScript("arguments[0].click();", alloverPageGK.sizeGK);
+        js.executeScript("arguments[0].click();", alloverPageGK.sizeMenuGK);
         ReusableMethods.bekle(2);
-     //   alloverPage.addNameGK.sendKeys(name);
-        ReusableMethods.click(alloverPage.submitButtonGK2);
-        softAssert.assertTrue(alloverPage.successfullTextGK.isDisplayed());
+        js.executeScript("arguments[0].click();", alloverPageGK.selectAllGK);
+        ReusableMethods.bekle(2);
+        js.executeScript("arguments[0].click();", alloverPageGK.okSizeButtonGK);
+        ReusableMethods.bekle(2);
+        //   alloverPage.addNameGK.sendKeys(name);
+        ReusableMethods.click(alloverPageGK.submitButtonGK2);
+        softAssert.assertTrue(alloverPageGK.successfullTextGK.isDisplayed());
+
+
+    }
+
+    @Test
+    public void productteUrunGorme(String nameProduct) {
+        ReusableMethods.bekle(2);
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        AlloverPage alloverPageGK = new AlloverPage();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_UP);
+      //  alloverPageGK.viewsButtonGK.click();
+          js.executeScript("arguments[0].click();", alloverPageGK.viewsButtonGK2);
+      //  Driver.getDriver().switchTo().newWindow(WindowType.TAB);
+        ReusableMethods.bekle(2);
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(alloverPageGK.producktTitleGK.equals(nameProduct));
+        Driver.closeDriver();
 
 
     }
