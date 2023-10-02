@@ -23,7 +23,7 @@ public class US02_TC04 {
         //Kayitli email adresi gir
         //Gecerli,kayitli password gir
 
-        homePage.usernameTabAyse.sendKeys(ConfigReader.getProperty("kayitliUsernameAyse"),
+        homePage.usernameTabAyse.sendKeys(ConfigReader.getProperty("kayitliUsernameAyse01"),
                 Keys.TAB,ConfigReader.getProperty("kayitliMailAyse01"),Keys.TAB,
                 ConfigReader.getProperty("kayitliPasswordAyse"),Keys.ENTER);
         ReusableMethods.extentTest.info("Kullanici kayitli bir username, kayirli bir mail ve kayitli bir password girdi");

@@ -215,21 +215,21 @@ public class ReusableMethods {
         }
     }
     //Extent Report
-    public static void rapor(String browser,String reportName){
+    public static void rapor(String browser,String reportName) {
         extentReport = new ExtentReports();
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "target/extentReport/report"+tarih+".html";
+        String dosyaYolu = "target/extentReport/report" + tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReport.attachReporter(extentHtmlReporter);
 
         //Raporda gözükmesini istediğimiz bilgiler
-        extentReport.setSystemInfo("Tester","Team03Members");
-        extentReport.setSystemInfo("browser",browser);
+        extentReport.setSystemInfo("Tester", "Team03Members");
+        extentReport.setSystemInfo("browser", browser);
         extentHtmlReporter.config().setDocumentTitle("ExtentReport");
         extentHtmlReporter.config().setReportName(reportName);
-        extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
-  
+        extentTest = extentReport.createTest("AlloverCommerceTest", "Test Raporu");
 
+    }
 
 
 //    //WebElement ScreenShot
@@ -249,6 +249,6 @@ public class ReusableMethods {
 //    }
 }
 
-}
+
 
 

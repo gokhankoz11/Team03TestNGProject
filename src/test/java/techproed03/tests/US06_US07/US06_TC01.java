@@ -12,6 +12,8 @@ import techproed03.utilities.ReusableMethods;
 
 import java.security.Key;
 
+import static org.testng.Assert.assertTrue;
+
 public class US06_TC01 {
 
 
@@ -30,6 +32,7 @@ public class US06_TC01 {
         ReusableMethods.bekle(3);
         alloverPage.SignInButtonMerve2.click();
         ReusableMethods.bekle(3);
+
         //kullanici search kutusuna aradigi seyi yazar.
         ReusableMethods.bekle(3);
         alloverPage.SearchButtonMerve.sendKeys("Electric Rice-Cooker", Keys.ENTER);
