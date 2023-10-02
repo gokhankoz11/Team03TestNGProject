@@ -19,6 +19,7 @@ import java.util.List;
 public class US01_TC01 {
     @Test
     public void testCase01() {
+
         AlloverPage homePage=new AlloverPage();
         FakeMailPage fakeMailPage=new FakeMailPage();
         SiteyeGitRegisterTiklaVeFakeMailAl kayitIslemleri=new SiteyeGitRegisterTiklaVeFakeMailAl();
@@ -57,4 +58,10 @@ public class US01_TC01 {
 
 
     }
-}
+
+
+
+    }
+
+
+

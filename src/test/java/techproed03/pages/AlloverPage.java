@@ -425,7 +425,7 @@ public class AlloverPage {
     @FindBy(xpath = "//input[@id='password']") public WebElement PasswordM;
     @FindBy(xpath = "//*[@type='submit']") public WebElement SignInButtonMerve2;
     @FindBy(xpath = "(//*[@type='search'])[1]") public WebElement SearchButtonMerve;
-    @FindBy(xpath = "//*[.='Electric Rice-Cooker']") public WebElement VerifyM;
+    @FindBy(xpath = "(//*[.='Electric Rice-Cooker'])[4]") public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']") public WebElement AddToCardMerve;
     @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
     @FindBy(xpath = "//*[@class='product-quantity']") public WebElement CardPlusMinus;
