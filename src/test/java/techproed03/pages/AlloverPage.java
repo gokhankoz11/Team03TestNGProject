@@ -15,14 +15,32 @@ public class AlloverPage {
 
         //!!!Kesinlikle ctrl+L yapmayalim!!!   _________  !!!Branch'imiza dikkat edelim sahsi düzenlemelerde kendi branchimizla calisalim!!!
     }
-
+    //public AlloverPage anaSayfa = new AlloverPage();
     //Hakan Oguz - 40
-
-
-
-
-
-
+    @FindBy (xpath = "//*[text()='Register']")   public WebElement registerButonuHkn;     @FindBy(xpath = "//span[.='Sign In']")    public WebElement signInHkn;
+    @FindBy(xpath = "(//input[@type='password'])[1]")    public WebElement passwordRegistrationHkn;    @FindBy(xpath = "//*[@id='customer_login']")    public WebElement signInPopUpHkn;
+    @FindBy(xpath = "//*[@class='woocommerce-button button woocommerce-form-login__submit']")    public WebElement signInButtonHkn;    @FindBy(xpath = "//*[@class='account']")    public WebElement signOutButonuHkn;
+    @FindBy(xpath = "(//a[@href='https://allovercommerce.com/vendor-register/'])[2]")    public WebElement becomeVendorHkn;    @FindBy(xpath = "(//h2)[1]")    public WebElement vendorRegistrationYazisiHkn;
+    @FindBy(xpath = "//input[@id='username']")    public WebElement usernameKutusuHkn;    @FindBy(xpath = "//*[@id='password']")    public WebElement passwordHkn;
+    @FindBy(xpath = "(//h2)[1]")    public WebElement myAccountYazisiHkn;    @FindBy(xpath = "//*[@id='password_strength']")    public WebElement passwordSeviyeHkn;
+    @FindBy(id = "password_strength")    public WebElement verifyPasswordHkn;    @FindBy(xpath = "//*[text()='Dashboard']")    public WebElement dashboardTextHkn;
+    @FindBy(xpath = "//*[.='Store Manager']")    public WebElement storeManagerTextHkn;
+    @FindBy(xpath = "//h2[1]")   public WebElement storeManagerBaslikHkn;
+    @FindBy(xpath = "(//*[.='Orders'])[1]")    public WebElement orderTextHkn;
+    @FindBy(xpath = "(//h4)[2]")    public WebElement orderBaslikHkn;
+    @FindBy(xpath ="//*[.='Downloads']")    public WebElement downloadsTextHkn;
+    @FindBy(xpath = "(//*[h4])[2]")    public WebElement downloadsBaslikHkn;
+    @FindBy(xpath = "(//*[.='Addresses'])")    public WebElement addressesTextHkn;
+    @FindBy(xpath = "(//h4)[2]")    public WebElement addressesBaslikHkn;
+    @FindBy(xpath = "//*[.='Account details']")    public WebElement accountDetailstextHkn;
+    @FindBy(xpath = "(//h4)[2]")    public WebElement accountDetailsBaslikHkn;
+    @FindBy(xpath = "(//*[@href='https://allovercommerce.com/wishlist/'])[2]")    public WebElement wishlistTextHkn;
+    @FindBy(xpath = "(//h2)[1]")    public WebElement wishlistBaslikHkn;
+    @FindBy(xpath = "//*[@href='https://allovercommerce.com/my-account-2/support-tickets/']")    public WebElement supportTicketsTextHkn;
+    @FindBy(xpath = "//*[@data-title='Ticket(s)']")    public WebElement ticketsStatusHkn;
+    @FindBy(xpath = "//*[.='Followings']")    public WebElement followingsTextHkn;
+    @FindBy(xpath = "//*[.='Followings']")    public WebElement followingStoreHkn;
+  @FindBy(xpath = "//*[.='Logout']")    public WebElement logoutTextHkn;
 
 
 
@@ -426,6 +444,7 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@type='submit']") public WebElement SignInButtonMerve2;
     @FindBy(xpath = "(//*[@type='search'])[1]") public WebElement SearchButtonMerve;
     @FindBy(xpath = "//*[.='Electric Rice-Cooker'])[4]") public WebElement VerifyM;
+    @FindBy(xpath = "(//*[.='Electric Rice-Cooker'])[4]") public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']") public WebElement AddToCardMerve;
     @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
     @FindBy(xpath = "//*[@class='product-quantity']") public WebElement CardPlusMinus;
