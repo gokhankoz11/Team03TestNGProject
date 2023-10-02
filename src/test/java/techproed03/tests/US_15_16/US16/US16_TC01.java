@@ -13,8 +13,9 @@ public class US16_TC01 extends LoginIn16GK {
 
         // Simple Products islemleri zorunlu alanlar dolduruldugunda  gerceklesmeli
 
-        loginIn16("urun","100","90");
+        loginIn16("Samsung","100","90");
         fotoEklemeSubmitGK();
+        productteUrunGorme("Samsung");
 
 
 

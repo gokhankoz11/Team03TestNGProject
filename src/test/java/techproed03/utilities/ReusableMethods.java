@@ -227,10 +227,20 @@ public class ReusableMethods {
         extentReport.setSystemInfo("browser", browser);
         extentHtmlReporter.config().setDocumentTitle("ExtentReport");
         extentHtmlReporter.config().setReportName(reportName);
+
+        extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
+
+
         extentTest = extentReport.createTest("AlloverCommerceTest", "Test Raporu");
+
 
     }
 
+
+
+    //WebElement ScreenShot
+    public static void webElementResmi2(WebElement element,String className) {
+        String elementClass = element.getAttribute("class");
 
 //    //WebElement ScreenShot
 //    public static void webElementResmi2(WebElement element,String className) {
@@ -248,6 +258,18 @@ public class ReusableMethods {
 //        }
 //    }
 }
+
+
+
+
+        try {
+            FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+ }
+
 
 
 

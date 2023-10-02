@@ -11,7 +11,7 @@ public class US15_TC01 extends LoginIn15GK {
         //Inventory islemleri zorunlu alanlar dolduruldugunda  gerceklesmeli
         // ("SKU", "Manage Stock?", "Stock Status", "SoldI ndividually")
         loginIn15();
-        testInventory("b10", "10");
+        testInventory("c10", "10");
 
 
     }
