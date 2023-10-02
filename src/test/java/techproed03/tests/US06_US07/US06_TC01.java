@@ -12,6 +12,8 @@ import techproed03.utilities.ReusableMethods;
 
 import java.security.Key;
 
+import static org.testng.Assert.assertTrue;
+
 public class US06_TC01 {
 
 
