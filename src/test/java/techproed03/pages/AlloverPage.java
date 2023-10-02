@@ -425,7 +425,7 @@ public class AlloverPage {
     @FindBy(xpath = "//input[@id='password']") public WebElement PasswordM;
     @FindBy(xpath = "//*[@type='submit']") public WebElement SignInButtonMerve2;
     @FindBy(xpath = "(//*[@type='search'])[1]") public WebElement SearchButtonMerve;
-    @FindBy(xpath = "//*[.='Electric Rice-Cooker']") public WebElement VerifyM;
+    @FindBy(xpath = "//*[.='Electric Rice-Cooker'])[4]") public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']") public WebElement AddToCardMerve;
     @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
     @FindBy(xpath = "//*[@class='product-quantity']") public WebElement CardPlusMinus;
@@ -448,9 +448,13 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']") public WebElement AlisverisBitti;
     @FindBy(xpath = "//*[@class='btn btn-dark btn-rounded']") public WebElement CompareM;
     @FindBy(xpath = "//*[@id='main']") public WebElement AnaSayfaM;
-
-
-
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[3]/div/figure/div[2]/a[2]") public WebElement Terazi1;
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[2]/div/figure/div/a[2]") public WebElement Terazi;
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[1]/div/figure/div[2]/a[2]") public WebElement Terazi2;
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[4]/div/figure/div[2]/a[2]") public WebElement Terazi3;
+    @FindBy(xpath = "//*[@class='w-icon-times-solid']") public WebElement SilmeIsareti;
+    @FindBy(xpath = "//*[@class='w-icon-compare empty-icon']") public  WebElement CompareBos;
+    @FindBy(xpath = "//*[@class='wolmart-compare-table product-loop']") public WebElement KarsilastirmaEkrani;
 
     //Gökhan - 310
     @FindBy(xpath ="//span[.='Sign In']")
