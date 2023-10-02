@@ -215,32 +215,52 @@ public class ReusableMethods {
         }
     }
     //Extent Report
-    public static void rapor(String browser,String reportName){
+    public static void rapor(String browser,String reportName) {
         extentReport = new ExtentReports();
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "target/extentReport/report"+tarih+".html";
+        String dosyaYolu = "target/extentReport/report" + tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReport.attachReporter(extentHtmlReporter);
 
         //Raporda gözükmesini istediğimiz bilgiler
-        extentReport.setSystemInfo("Tester","Team03Members");
-        extentReport.setSystemInfo("browser",browser);
+        extentReport.setSystemInfo("Tester", "Team03Members");
+        extentReport.setSystemInfo("browser", browser);
         extentHtmlReporter.config().setDocumentTitle("ExtentReport");
         extentHtmlReporter.config().setReportName(reportName);
+
         extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
 
 
+        extentTest = extentReport.createTest("AlloverCommerceTest", "Test Raporu");
+
+
     }
+
 
 
     //WebElement ScreenShot
     public static void webElementResmi2(WebElement element,String className) {
         String elementClass = element.getAttribute("class");
 
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaAdi = className + "_Class'ı" + "_webElementScreenshot" + elementClass + tarih + ".png";
-        String dosyaYolu = "TestOutput/screenshot/" + dosyaAdi;
-        //String dosyaYolu = "TestOutput/screenshot/webElementScreenshot" + tarih + ".png";
+//    //WebElement ScreenShot
+//    public static void webElementResmi2(WebElement element,String className) {
+//        String elementClass = element.getAttribute("class");
+//
+//        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+//        String dosyaAdi = className + "_Class'ı" + "_webElementScreenshot" + elementClass + tarih + ".png";
+//        String dosyaYolu = "TestOutput/screenshot/" + dosyaAdi;
+//        //String dosyaYolu = "TestOutput/screenshot/webElementScreenshot" + tarih + ".png";
+//
+//        try {
+//            FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+}
+
+
+
 
         try {
             FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
@@ -249,6 +269,8 @@ public class ReusableMethods {
         }
     }
  }
+
+
 
 
 
