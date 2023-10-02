@@ -16,34 +16,48 @@ import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Random;
 
+import static techproed03.utilities.ReusableMethods.extentHtmlReporter;
+
 public abstract class LoginIn15GK {
     Actions actionsGK = new Actions(Driver.getDriver());
 
 
     public void loginIn15() throws InterruptedException, FileNotFoundException {
+        ReusableMethods.rapor("Chrome","Test Raporu");
         Driver.getDriver().get(ConfigReader.getProperty("allerCommerceUrlGK"));
+        ReusableMethods.extentReport.setSystemInfo("Gökhan","Team03Members");
+        ReusableMethods. extentReport.attachReporter(extentHtmlReporter);
+        extentHtmlReporter.config().setDocumentTitle("ExtentReport");
+
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Kullanici Allover Commerce sayfasina  gider ");
         AlloverPage alloverPageGK = new AlloverPage();
         SoftAssert softAssertGk = new SoftAssert();
         alloverPageGK.singInButtonGK.click();
+        ReusableMethods.extentTest.info("Kullanici sig in butonunu tiklar ");
         ReusableMethods.bekle(2);
         alloverPageGK.userNameGK.sendKeys(ConfigReader.getProperty("emailGK"), Keys.TAB, ConfigReader.getProperty("passwordGK"));
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Kullanici kayitli emaili ve passwordü girer  ");
         alloverPageGK.loginButtonGK.click();
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Kullanici login i tiklar ");
         alloverPageGK.signOutGK.click();
-        //Driver.getDriver().get("https://allovercommerce.com/store-manager/products-manage/");
+        ReusableMethods.extentTest.info("Kullanici sign out u tiklar ");
 
         ReusableMethods.bekle(2);
         alloverPageGK.storeManagerGK.click();
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Kullanici Story Manager i tiklar ");
 
 
         actionsGK.moveToElement(alloverPageGK.produktGK).perform();
         ReusableMethods.bekle(2);
         alloverPageGK.addNewGK.click();
+        ReusableMethods.extentTest.info("Kullanici add new i tiklar ");
         ReusableMethods.bekle(2);
         alloverPageGK.producktTitleGK.sendKeys("urun", Keys.TAB, "100", Keys.TAB, "90");
+        ReusableMethods.extentTest.info("Kullanici zorunlu alanlara veri girer ");
 
         ReusableMethods.bekle(2);
 
@@ -58,6 +72,7 @@ public abstract class LoginIn15GK {
         ReusableMethods.bekle(2);
         alloverPageGK.featuredImgSelectButton.click();
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Kullanici siteye resim yukler ");
 
 
         alloverPageGK.galleryImg.click();
@@ -71,12 +86,13 @@ public abstract class LoginIn15GK {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].click();", alloverPageGK.addToGalleryGK);
-
+        ReusableMethods.extentTest.info("Kullanici siteye resim yukler ");
         ReusableMethods.bekle(2);
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.click(alloverPageGK.bestSellerCheckbox);
 
+        ReusableMethods.extentTest.info("Kullanici Categories secer ");
 
     }
 
@@ -86,23 +102,22 @@ public abstract class LoginIn15GK {
         AlloverPage alloverPageGK = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
-
-        //  actions.scrollToElement(alloverPage.draftGK).perform();
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         SoftAssert softAssert = new SoftAssert();
-        // ReusableMethods.scroll(alloverPage.skuGK);
+
         ReusableMethods.bekle(2);
         ReusableMethods.visibleWait(alloverPageGK.skuGK, 10);
         ReusableMethods.sendKeysJS(alloverPageGK.skuGK, sku);
         softAssert.assertTrue(alloverPageGK.skuGK.isSelected());
+        ReusableMethods.extentTest.info("Kullanici Sku ya veri  girer ");
         ReusableMethods.click(alloverPageGK.manageStockGK);
-        // ReusableMethods.scroll(alloverPage.advancedGK);
+
         softAssert.assertTrue(alloverPageGK.manageStockGK.isSelected());
-        //   alloverPage.manageStockGK.click();
+
 
         softAssert.assertTrue(alloverPageGK.skuGK.isSelected());
         ReusableMethods.sendKeysJS(alloverPageGK.stockQtyGK, strockQt);
-
+        ReusableMethods.extentTest.info("Kullanici Stock Qty girer ");
         softAssert.assertTrue(alloverPageGK.stockQtyGK.isSelected());
         Select select = new Select(alloverPageGK.backOrdesGK);
 
@@ -110,10 +125,11 @@ public abstract class LoginIn15GK {
         softAssert.assertTrue(alloverPageGK.backOrdesGK.isSelected());
         ReusableMethods.bekle(2);
         alloverPageGK.soldIndindividGK.click();
-
+        ReusableMethods.extentTest.info("Kullanici Sold Individually tiklar ");
         ReusableMethods.click(alloverPageGK.submitButtonGK2);
         softAssert.assertTrue(alloverPageGK.successfullTextGK.isDisplayed());
-
+        ReusableMethods.extentTest.info("Kullanici urunu yukler ");
+        ReusableMethods.extentReport.flush();
     }
 
     @Test
@@ -126,10 +142,12 @@ public abstract class LoginIn15GK {
         SoftAssert softAssert = new SoftAssert();
         ReusableMethods.scroll(alloverPageGK.submitButtonGK2);
         ReusableMethods.click(alloverPageGK.shippingGK);
+        ReusableMethods.extentTest.info("Kullanici Shipping i tiklar");
         ReusableMethods.bekle(2);
         softAssert.assertTrue(alloverPageGK.shippingGK.isDisplayed());
         alloverPageGK.weightGK.sendKeys(weight, Keys.TAB, lenght, Keys.TAB, widht, Keys.TAB,
                 height, Keys.TAB, Keys.TAB);
+        ReusableMethods.extentTest.info("Kullanici Weight, Lenght, Width, Height verilerini girer");
         softAssert.assertTrue(alloverPageGK.weightGK.isEnabled());
         softAssert.assertTrue(alloverPageGK.lenghtGK.isEnabled());
         softAssert.assertTrue(alloverPageGK.widthGK.isEnabled());
@@ -137,9 +155,11 @@ public abstract class LoginIn15GK {
 
         Select select = new Select(alloverPageGK.processingTimeGK);
         select.selectByIndex(1);
+        ReusableMethods.extentTest.info("Kullanici Processing Time i secer");
         ReusableMethods.click(alloverPageGK.submitButtonGK2);
         softAssert.assertTrue(alloverPageGK.successfullTextGK.isDisplayed());
-
+        ReusableMethods.extentTest.info("Kullanici urunu yukler ");
+        ReusableMethods.extentReport.flush();
     }
 
 
@@ -148,20 +168,18 @@ public abstract class LoginIn15GK {
         AlloverPage alloverPageGK = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
 
-
-        //  actions.sendKeys(Keys.PAGE_DOWN).perform();
         actions.scrollToElement(alloverPageGK.submitButtonGK);
         SoftAssert softAssert = new SoftAssert();
-        // ReusableMethods.scroll(alloverPage.submitButtonGK2);
+
 
         ReusableMethods.bekle(2);
         ReusableMethods.click(alloverPageGK.attributesGK);
         ReusableMethods.bekle(3);
+        ReusableMethods.extentTest.info("Kullanici Attributes i tiklar ");
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
         js.executeScript("arguments[0].click();", alloverPageGK.colorGK);
-
-        //  ReusableMethods.scroll(alloverPage.sizeGK);
+        ReusableMethods.extentTest.info("Kullanici Color i tiklar ");
 
 
         js.executeScript("arguments[0].click();", alloverPageGK.colorMenuGK);
@@ -170,25 +188,8 @@ public abstract class LoginIn15GK {
         js.executeScript("arguments[0].click();", alloverPageGK.selectAllGK);
         ReusableMethods.bekle(2);
         js.executeScript("arguments[0].click();", alloverPageGK.okButtonGK);
+        ReusableMethods.extentTest.info("Kullanici Color menu den optionlar  secilir ");
 
-        //   alloverPage.addNewColorGK.click();
-
-        // Driver.getDriver().switchTo().alert().sendKeys("siyah" + Keys.ENTER);
-
-        //  Select select=new Select(alloverPage.colorMenuGK2);
-
-        //  ReusableMethods.bekle(2);
-
-        //  select.getFirstSelectedOption();
-        //  actions.doubleClick();
-
-
-        //   List<WebElement> renkler= Driver.getDriver().findElements(By.cssSelector("#select2-attributes_value_1-results"));
-        //   Random random=new Random();
-        //  int randomColor= random.nextInt(renkler.size());
-        //  renkler.get(randomColor).click();
-
-        // js.executeScript("arguments[0].click();", alloverPage.aaColorGK);
 
         ReusableMethods.scroll(alloverPageGK.submitButtonGK);
 
@@ -202,11 +203,12 @@ public abstract class LoginIn15GK {
         ReusableMethods.bekle(2);
         js.executeScript("arguments[0].click();", alloverPageGK.okSizeButtonGK);
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Kullanici Size menusunden optionlar secilir ");
         //   alloverPage.addNameGK.sendKeys(name);
         ReusableMethods.click(alloverPageGK.submitButtonGK2);
         softAssert.assertTrue(alloverPageGK.successfullTextGK.isDisplayed());
-
-
+        ReusableMethods.extentTest.info("Kullanici urunu yukler ");
+        ReusableMethods.extentReport.flush();
     }
 
     @Test
@@ -216,14 +218,15 @@ public abstract class LoginIn15GK {
         AlloverPage alloverPageGK = new AlloverPage();
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_UP);
-      //  alloverPageGK.viewsButtonGK.click();
+
           js.executeScript("arguments[0].click();", alloverPageGK.viewsButtonGK2);
-      //  Driver.getDriver().switchTo().newWindow(WindowType.TAB);
+        ReusableMethods.extentTest.info("Kullanici yuklenen urunu gormek icin wiev butonuna tiklar ");
         ReusableMethods.bekle(2);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(alloverPageGK.producktTitleGK.equals(nameProduct));
         Driver.closeDriver();
-
+        ReusableMethods.extentTest.info("Kullanici yuklenen urunu sayfada gorur ");
+        ReusableMethods.extentReport.flush();
 
     }
 }

@@ -228,8 +228,9 @@ public class ReusableMethods {
         extentHtmlReporter.config().setDocumentTitle("ExtentReport");
         extentHtmlReporter.config().setReportName(reportName);
         extentTest=extentReport.createTest("AlloverCommerceTest","Test Raporu");
-  
 
+
+    }
 
 
     //WebElement ScreenShot
@@ -247,8 +248,7 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
-}
  }
-}
+
 
 

@@ -616,7 +616,11 @@ public class AlloverPage {
     @FindBy(css = ".view_count") public WebElement viewsButtonGK2;
     @FindBy(xpath = "//h1") public WebElement urunTitleGK;
 
+  @FindBy(css = "#is_virtual")
+  public WebElement virtualGK;
 
+  @FindBy(css = "#is_downloadable")
+  public WebElement downloadableGK;
 
 
 

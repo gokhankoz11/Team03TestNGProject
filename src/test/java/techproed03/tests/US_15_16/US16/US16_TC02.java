@@ -13,5 +13,6 @@ public class US16_TC02 extends LoginIn16GK {
       //  Simple Products islemleri zorunlu alanlar doldurulmadan  gerceklesmez
         loginIn16("","","");
         fotoEklemeSubmitGK();
+        productteUrunGorme("");
     }
 }
