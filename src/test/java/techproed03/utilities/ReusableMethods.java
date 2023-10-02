@@ -239,36 +239,29 @@ public class ReusableMethods {
 
 
     //WebElement ScreenShot
-    public static void webElementResmi2(WebElement element,String className) {
-        String elementClass = element.getAttribute("class");
 
-//    //WebElement ScreenShot
-//    public static void webElementResmi2(WebElement element,String className) {
-//        String elementClass = element.getAttribute("class");
-//
-//        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-//        String dosyaAdi = className + "_Class'ı" + "_webElementScreenshot" + elementClass + tarih + ".png";
-//        String dosyaYolu = "TestOutput/screenshot/" + dosyaAdi;
-//        //String dosyaYolu = "TestOutput/screenshot/webElementScreenshot" + tarih + ".png";
-//
-//        try {
-//            FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+
+   //WebElement ScreenShot
+   public static void webElementResmi2(WebElement element,String className) {
+       String elementClass = element.getAttribute("class");
+
+       String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+       String dosyaAdi = className + "_Class'ı" + "_webElementScreenshot" + elementClass + tarih + ".png";
+       String dosyaYolu = "TestOutput/screenshot/" + dosyaAdi;
+       //String dosyaYolu = "TestOutput/screenshot/webElementScreenshot" + tarih + ".png";
+
+       try {
+           FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
+       } catch (IOException e) {
+           throw new RuntimeException(e);
+       }
+   }
 }
 
 
 
 
-        try {
-            FileUtils.copyFile(element.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
- }
+
 
 
 
