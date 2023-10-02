@@ -227,7 +227,7 @@ public abstract class LoginIn15GK {
         Driver.closeDriver();
         ReusableMethods.extentTest.info("Kullanici yuklenen urunu sayfada gorur ");
         ReusableMethods.extentReport.flush();
-
+//
     }
 }
 
