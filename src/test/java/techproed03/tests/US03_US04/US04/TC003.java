@@ -10,10 +10,12 @@ import techproed03.utilities.ReusableMethods;
 public class TC003 {
     @Test
     public void positiveTest() {
+        ReusableMethods.rapor("chorme","Shipping Adress Testi");
 
         //Kullanici olarak giris yapiniz
         MyMethod.userLoginMethod();
         ReusableMethods.bekle(3);
+        ReusableMethods.extentTest.info("Kullanici olarak giris yapildi");
 
         //My Account alanina tiklayiniz
         AlloverPage alloverPage=new AlloverPage();
@@ -26,18 +28,24 @@ public class TC003 {
         ReusableMethods.bekle(2);
         ReusableMethods.scroll(alloverPage.shippingAddressAddButtonNT);
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Shipping Adress formuna gidildi");
         alloverPage.shippingAddressAddButtonNT.click();
         //Clear methodu ile dolu alanlari temizleyin
         ReusableMethods.bekle(2);
         MyMethod.userShippingClearMethod();
+        ReusableMethods.extentTest.info("Shipping Clear Methodu Calisti");
 
         //Zorunlu adres kutucuklarini eksiksiz doldurunuz
         MyMethod.userShippingAddressFormDoldurmaMethod();
+        ReusableMethods.extentTest.info("Doldurulmasi gereken Tum Zorunlu Alanlar Dolduruldu");
         ReusableMethods.bekle(2);
         //''Address changed successfully'' mesajinin alindigini dogrula
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(alloverPage.addressSuccessfullyNT.isDisplayed());
+        ReusableMethods.extentTest.pass("Address changed successfully mesaji alindigi dogrulandi");
         Driver.closeDriver();
+        ReusableMethods.extentTest.info("Sayfa Kapatildi");
+        ReusableMethods.extentReport.flush();
 
 
 

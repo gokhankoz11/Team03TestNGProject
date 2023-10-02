@@ -15,6 +15,7 @@ public class TC001 {
         ReusableMethods.rapor("chorme","Billing Adress Testi");
         MyMethod.userLoginMethod();
         ReusableMethods.bekle(3);
+        ReusableMethods.extentTest.info("Kullanici olarak giris yapildi");
 
 
         //My Account alanina tiklayiniz
@@ -29,10 +30,15 @@ public class TC001 {
         ReusableMethods.bekle(2);
         alloverPage.billingEditYourAddressNT.click();
         ReusableMethods.bekle(2);
+        ReusableMethods.extentTest.info("Billing Adress formuna gidildi");
         MyMethod.userBillingClearMethod();
+
         //Zorunlu adres kutucuklarini bos birakiniz
         alloverPage.billingSaveAddressButtonNT.click();
+        ReusableMethods.extentTest.info("Biling Clear Methodu Calisti");
 
+
+        ReusableMethods.extentTest.info("Doldurulmasi gereken Tum Zorunlu Alanlar Bos birakildi");
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(alloverPage.billingFirstNameUyariMesajiNT.isDisplayed());
         softAssert.assertTrue(alloverPage.billingLastNameUyariMesajiNT.isDisplayed());
@@ -40,7 +46,10 @@ public class TC001 {
         softAssert.assertTrue(alloverPage.billingPostCodeUyariMesajiNT.isDisplayed());
         softAssert.assertTrue(alloverPage.billingTownCityUyariMesajiNT.isDisplayed());
         softAssert.assertAll();
+        ReusableMethods.extentTest.pass("Doldurulmasi gereken tum zorunlu alanlar bos birakildigi icin uyari mesaji alindigi dogrulandi");
         Driver.closeDriver();
+        ReusableMethods.extentTest.info("Sayfa Kapatildi");
+        ReusableMethods.extentReport.flush();
 
     }
 }
