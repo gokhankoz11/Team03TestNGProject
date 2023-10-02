@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import techproed03.utilities.Driver;
 
+import java.util.List;
+
 
 public class AlloverPage {
     public AlloverPage(){
@@ -224,10 +226,26 @@ public class AlloverPage {
     @FindBy(xpath = "//a[text()='My Account']") public WebElement myAccountLinkSuna; @FindBy(xpath = "//a[text()='Account details']") public WebElement accountDetailsLinkSuna;
     @FindBy(xpath = "(//h4)[2]") public WebElement accountDetailsBasligiSuna; @FindBy(css="#account_first_name") public WebElement firstNameSuna;
     @FindBy(css="#account_last_name") public WebElement lastNameSuna; @FindBy(css="#account_display_name") public WebElement displayNameSuna;
-    @FindBy(css="#account_email") public WebElement emailAdressSuna; @FindBy(xpath="//button[@name='save_account_details']") public WebElement saveChangesButtonSuna;
-    @FindBy(xpath = "//*[@role='alert']") public WebElement basariliYazisi1Suna; @FindBy(xpath = "//*[@id='tinymce']") public WebElement biographyBolumuSuna;
+    @FindBy(css="#account_email") public WebElement emailAdressSuna; @FindBy(xpath="(//*[@type='submit'])[2]") public WebElement saveChangesButtonSuna;
+    @FindBy(xpath = "//*[@role='alert']") public WebElement basariliYazisi1Suna; @FindBy(xpath = "//body[@id='tinymce']") public WebElement biographyBolumuSuna;
     @FindBy(css = "#password_current") public WebElement currentPasswordSuna; @FindBy(css = "#password_1") public WebElement newPasswordSuna;
-    @FindBy(css = "#password_2") public WebElement confirmPasswordSuna; @FindBy(xpath = "//*[@class='page-title-bar']") public WebElement basariliYazisi2Suna;
+    @FindBy(css = "#password_2") public WebElement confirmPasswordSuna; @FindBy(xpath = "//*//*[@role='alert']") public WebElement basariliYazisi2Suna;
+    @FindBy(xpath = "//a[text()='Store Manager']") public WebElement storeManagerButtonSuna; @FindBy(xpath = "(//span[@class='text'])[4]") public WebElement productsSuna;
+    @FindBy(xpath = "(//div//span//a)[2]") public WebElement productsAddNewSuna; @FindBy(css="#product_type") public WebElement productTypeOptionsSuna;
+    @FindBy(css ="#featured_img_display") public WebElement buyukResimKutusuSuna; @FindBy(css = "#__wp-uploader-id-1") public WebElement selectFilesSuna;
+    @FindBy(xpath = "(//button[@type='button'])[83]") public WebElement buyukResimSelectSuna; @FindBy(css = "#pro_title") public WebElement productTitleSuna;
+
+    @FindBy(xpath = "(//body[@id='tinymce'])[1]") public WebElement shortDescriptionSuna; @FindBy(xpath = "//body[@data-id='description']") public WebElement descriptionSuna;
+    @FindBy(xpath = "//div[@class='wcfm_product_manager_cats_checklist_fields']") public List<WebElement> categoriesListSuna;
+    @FindBy(xpath = "(//span[@class='wcfmfa fa-arrow-circle-right sub_checklist_toggler'])[2]") public List<WebElement> categoriesOklariSuna;
+    @FindBy(xpath = "(//*[@class='description wcfm_full_ele wcfm_side_add_new_category wcfm_add_new_category wcfm_add_new_taxonomy'])[1]") public WebElement addNewCategorySuna;
+    @FindBy(css = "#wcfm_new_cat") public WebElement categoryNameBoxSuna; @FindBy(xpath = "//*[@id='wcfm_new_parent_cat']") public WebElement parentCategorySuna;
+    @FindBy(xpath = "(//*[text()='Add'])[1]") public WebElement addParentCategorySuna; @FindBy(xpath = "(//*[text()='Product brands'])[1]") public WebElement productBrandsBoxSuna;
+
+    @FindBy(xpath = "//*[@class='wcfm-checkbox checklist_type_product_brand ']") public List<WebElement> productBrandsListSuna;
+    @FindBy(xpath = "(//span[@class='wcfmfa fa-arrow-circle-right sub_checklist_toggler'])") public List<WebElement> productBrandsOklariSuna;
+    @FindBy(xpath = "//*[text()='+Add new Product brands']") public WebElement addNewProductBrandsSuna; @FindBy(xpath = "//input[@name='wcfm_new_product_brand']") public WebElement productBrandsNameBoxSuna;
+    @FindBy(xpath = "//*[@name='wcfm_new_parent_product_brand']") public WebElement parentTaxonomySuna; @FindBy(xpath = "(//*[text()='Add'])[2]") public WebElement addButtonProductBrandsSuna2;
 
 
 
@@ -235,7 +253,7 @@ public class AlloverPage {
 
 
 
-    @FindBy(xpath = "//*[@id='billing_email']") public WebElement billingEMailKutusuNT;
+    // @FindBy(xpath = "//*[@id='billing_email']") public WebElement billingEMailKutusuNT;
 
 
 
@@ -424,7 +442,7 @@ public class AlloverPage {
     @FindBy(xpath = "//input[@id='username']") public WebElement UserNameOrEmailAddress;
     @FindBy(xpath = "//input[@id='password']") public WebElement PasswordM;
     @FindBy(xpath = "//*[@type='submit']") public WebElement SignInButtonMerve2;
-    @FindBy(xpath = "//input[@type='search']") public WebElement SearchButtonMerve;
+    @FindBy(xpath = "(//*[@type='search'])[1]") public WebElement SearchButtonMerve;
     @FindBy(xpath = "//*[.='Electric Rice-Cooker']") public WebElement VerifyM;
     @FindBy(xpath = "//*[@name='add-to-cart']") public WebElement AddToCardMerve;
     @FindBy(xpath = "//*[@class='breadcrumb']") public WebElement AddToCardDogrulama;
@@ -446,6 +464,15 @@ public class AlloverPage {
     @FindBy(xpath = "//*[@id='billing_email']")public WebElement EmailM;
     @FindBy(xpath = "//*[@id='place_order']") public WebElement PlaceOrderM;
     @FindBy(xpath = "//*[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']") public WebElement AlisverisBitti;
+    @FindBy(xpath = "//*[.='Compare']") public WebElement CompareM;
+    @FindBy(xpath = "//*[.='Search results for “bag”']") public WebElement BagSonucM;
+    @FindBy(xpath = "//*[@id='main']") public WebElement AnaSayfaM;
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[2]/div/figure/div/a[2]") public WebElement Terazi1;
+
+
+
+
+
 
     //Gökhan - 310
     @FindBy(xpath ="//span[.='Sign In']")
@@ -525,7 +552,7 @@ public class AlloverPage {
     @FindBy(css = "#stock_qty")
     public WebElement stockQtyGK;
 
-    @FindBy(css = "#wcfm_products_manage_form_advanced_head")
+    @FindBy(xpath = "#wcfm_products_manage_form_advanced_head")
     public WebElement advancedGK;
 
     @FindBy(css = "#wcfm_products_simple_draft_button")
@@ -569,14 +596,25 @@ public class AlloverPage {
     @FindBy(css = "#attributes_is_active_1") public WebElement colorGK;
     @FindBy(xpath = "//input[@id='attributes_is_active_1']") public WebElement colorGK2;
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK3;
-    @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[2]") public WebElement colorMenuGK2;
-    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK;
-    @FindBy(xpath = "//*[@id='select2-attributes_value_1-result-5btq-711']") public WebElement aaColorGK;
+    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement colorMenuGK2;
+    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]") public WebElement   colorMenuGK;
+    @FindBy(css = "//*[@id='select2-attributes_value_1-result-5btq-711']") public WebElement aaColorGK;
+
+    @FindBy(xpath = "//*[@class='button wcfm_add_attribute_term wcfm_select_all_attributes']") public WebElement selectAllGK;
+
+
+    @FindBy(xpath = "(//*[@title='Toggle Block'])[2]") public WebElement okButtonGK;
+    @FindBy(xpath = "//*[@class='fields_collapser attributes_collapser wcfmfa fa-arrow-circle-down fa-arrow-circle-up']") public WebElement okSizeButtonGK;
+
     @FindBy(xpath = "(//*[text()='Add New'])[2]") public WebElement addNewColorGK;
     @FindBy(css = "#attributes_is_active_2") public WebElement sizeGK;
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[3]") public WebElement sizeMenuGK;
     @FindBy(xpath = "(//*[text()='Add'])[3]") public WebElement addGK;
     @FindBy(css = "#attributes_name_4") public WebElement addNameGK;
+
+    @FindBy(css = "wcfmfa fa-eye text_tip") public WebElement viewsButtonGK;
+    @FindBy(css = ".view_count") public WebElement viewsButtonGK2;
+    @FindBy(xpath = "//h1") public WebElement urunTitleGK;
 
 
 
@@ -629,6 +667,10 @@ public class AlloverPage {
     public WebElement galleryImgAddToGalleryButton;
     @FindBy(xpath = "(//button[@id='menu-item-upload'])[2]")
     public WebElement galleryImgUpLoadFileButton;
+
+
+
+
 
 
 }
